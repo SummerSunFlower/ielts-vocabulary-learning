@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Workbuddy
+.workbuddy/
+*.jsonl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
