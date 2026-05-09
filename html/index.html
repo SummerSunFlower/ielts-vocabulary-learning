@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Vocabulary Learning</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+      border-radius: 20px 20px 0 0;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      background: white;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .stat-card .number {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .stat-card .label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+    .chapter-box {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+    .chapter-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-color: #2563eb;
+    }
+    .chapter-box h3 {
+      color: #2563eb;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .chapter-box p {
+      color: #64748b;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .chapter-box .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .chapter-box .btn:hover {
+      background: #1e40af;
+      transform: translateY(-2px);
+    }
+    .progress-section {
+      padding: 40px;
+      background: #f8fafc;
+    }
+    .progress-section h2 {
+      color: #1e293b;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>📚 IELTS Vocabulary Learning</h1>
+      <p>基于《Check Your English Vocabulary for IELTS》的专业词汇学习系统<br>
+      定制化应用场景 · 系统化练习 · 严格测试评估</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <div class="number">2</div>
+        <div class="label">已完成章节</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">5</div>
+        <div class="label">学习资料文件</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">50+</div>
+        <div class="label">核心词汇</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">90%</div>
+        <div class="label">测试通过标准</div>
+      </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section">
+      <h2>📊 学习进度</h2>
+      <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="margin-bottom: 20px;">
+          <strong>How Something Works</strong>
+          <div class="progress-bar" style="margin-top: 10px;">
+            <div class="progress-fill" style="width: 100%;"></div>
+          </div>
+          <span style="color: #10b981; font-weight: 600;">✓ 已完成</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <strong>Reason & Result</strong>
+          <div class="progress-bar" style="margin-top: 10px;">
+            <div class="progress-filled" style="width: 100%;"></div>
+          </div>
+          <span style="color: #10b981; font-weight: 600;">✓ 已完成（含练习与测试）</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <strong>Changes</strong>
+          <div class="progress-bar" style="margin-top: 10px;">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+          <span style="color: #64748b;">待学习</span>
+        </div>
+        <div>
+          <strong>Contrast & Comparison</strong>
+          <div class="progress-bar" style="margin-top: 10px;">
+            <div class="progress-fill" style="width: 0%;"></div>
+          </div>
+          <span style="color: #64748b;">待学习</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapters -->
+    <div style="padding: 40px;">
+      <h2 style="color: #1e293b; margin-bottom: 30px; font-size: 2rem;">📖 学习章节</h2>
+      <div class="chapters-grid">
+        <!-- Chapter 1 -->
+        <div class="chapter-box">
+          <h3>🔧 How Something Works</h3>
+          <p>描述设备/系统工作原理的词汇<br>适用：雅思听力、写作Task 1</p>
+          <span class="tag">工作原理</span>
+          <span class="tag">主动/被动语态</span>
+          <div style="margin-top: 20px;">
+            <a href="chapters/how-something-works.html" class="btn">开始学习</a>
+          </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter-box">
+          <h3>🔵 Reason & Result</h3>
+          <p>表达"原因、目的、结果"的词汇<br>定制场景：Application Support</p>
+          <span class="tag">原因类</span>
+          <span class="tag">结果类</span>
+          <span class="tag">Application Support</span>
+          <div style="margin-top: 20px;">
+            <a href="chapters/reason-result.html" class="btn">查看笔记</a>
+            <a href="exercises/reason-result-exercises.html" class="btn btn-success" style="margin-left: 10px;">练习题</a>
+            <a href="tests/reason-result-test.html" class="btn" style="margin-left: 10px; background: #f59e0b;">严格测试</a>
+          </div>
+        </div>
+
+        <!-- Chapter 3 - Coming Soon -->
+        <div class="chapter-box" style="opacity: 0.6;">
+          <h3>📐 Changes</h3>
+          <p>描述变化、趋势的词汇<br>适用：雅思写作Task 1（图表题）</p>
+          <span class="tag">变化描述</span>
+          <span class="tag">趋势分析</span>
+          <div style="margin-top: 20px;">
+            <button class="btn" disabled style="background: #64748b; cursor: not-allowed;">即将推出</button>
+          </div>
+        </div>
+
+        <!-- Chapter 4 - Coming Soon -->
+        <div class="chapter-box" style="opacity: 0.6;">
+          <h3>⚖️ Contrast & Comparison</h3>
+          <p>对比与比较的词汇<br>适用：雅思写作Task 2、口语Part 3</p>
+          <span class="tag">对比</span>
+          <span class="tag">比较</span>
+          <div style="margin-top: 20px;">
+            <button class="btn" disabled style="background: #64748b; cursor: not-allowed;">即将推出</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>📚 IELTS Vocabulary Learning Project</p>
+      <p style="margin-top: 10px; opacity: 0.8;">Based on "Check Your English Vocabulary for IELTS"</p>
+      <p style="margin-top: 10px; opacity: 0.8;">Customized for Application Support Scenarios</p>
+    </div>
+  </div>
+</body>
+</html>
