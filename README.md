@@ -32,7 +32,11 @@ ielts-vocabulary-learning/
 │   ├── index.html                     # 首页（导航、进度追踪）
 │   ├── chapters/                      # 章节内容
 │   │   ├── how-something-works.html   # Unit 1: How Something Works
-│   │   └── reason-result.html         # Unit 2: Reason & Result
+│   │   ├── reason-result.html         # Unit 2: Reason & Result (Support 版)
+│   │   ├── reason-result-postmortem.html # Unit 2 场景: 事故报告书面版
+│   │   ├── reason-result-pm.html      # Unit 2 场景: PM 项目管理
+│   │   ├── reason-result-agile.html   # Unit 2 场景: 敏捷会议
+│   │   └── reason-result-external.html # Unit 2 场景: 客户/供应商
 │   ├── exercises/                     # 练习页面
 │   │   └── reason-result-exercises.html
 │   ├── tests/                         # 测试页面
@@ -44,6 +48,10 @@ ielts-vocabulary-learning/
 └── 📂 markdown/                       # Markdown 源文件（便于编辑）
     ├── How_Something_Works_词汇笔记.md
     ├── Reason_Result_ApplicationSupport_定制版.md
+    ├── Reason_Result_事故报告_书面版.md
+    ├── Reason_Result_PM场景_定制版.md
+    ├── Reason_Result_敏捷会议_定制版.md
+    ├── Reason_Result_客户供应商沟通_定制版.md
     ├── Reason_Result_练习集.md
     └── Reason_Result_严格测试.md
 ```
@@ -72,10 +80,18 @@ ielts-vocabulary-learning/
 - **适用场景：** 雅思听力、写作 Task 1
 - **核心词汇：** component, mechanism, function, operate, generate 等
 
-### 第二章：Reason & Result
-表达"原因、目的、结果"的词汇（已定制为 Application Support 场景）
-- **适用场景：** 口语沟通、会议讨论、跨团队协作、故障通报
-- **核心词汇：** because, due to, in order to, as a result, consequently 等
+### 第二章：Reason & Result（5 大业务场景定制）
+表达"原因、目的、结果"的词汇 —— 同一套 15 个核心词，5 个场景定制版：
+
+| 场景 | 页面 | 适用 |
+|------|------|------|
+| 💬 Application Support | `chapters/reason-result.html` | 故障通报、会议讨论、跨团队协作（口语） |
+| 📄 事故报告书面版 | `chapters/reason-result-postmortem.html` | Postmortem / RCA / Incident Report 书面写作 |
+| 📋 PM 项目管理 | `chapters/reason-result-pm.html` | 进度汇报、延期解释、风险上报、资源协调 |
+| 🏃 敏捷会议 | `chapters/reason-result-agile.html` | Daily Standup、Sprint Review、Retrospective |
+| 🤝 客户/供应商 | `chapters/reason-result-external.html` | 延误通知、SLA 沟通、期望管理（对外正式） |
+
+**核心词汇：** due to, owing to, on the grounds that, in order to, with the aim of, as a result, as a consequence, ensued, affect, motive 等 15 词
 
 ---
 

@@ -281,3 +281,83 @@ li {
     padding: 10px;
   }
 }
+
+/* ===== Chapter page shared components (extracted from inline styles) ===== */
+.chapter-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+}
+.chapter-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.back-link {
+  display: inline-block;
+  margin: 20px 40px;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.back-link:hover {
+  background: #1e40af;
+}
+.framework-box {
+  background: white;
+  padding: 30px;
+  margin: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.vocab-category {
+  background: white;
+  padding: 30px;
+  margin: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 5px solid #2563eb;
+}
+.vocab-category.reason { border-left-color: #3b82f6; }
+.vocab-category.purpose { border-left-color: #f59e0b; }
+.vocab-category.result { border-left-color: #10b981; }
+.vocab-category.motive { border-left-color: #ef4444; }
+.scenario-box {
+  background: #f8fafc;
+  padding: 25px;
+  margin: 25px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.scenario-box h3 {
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+.dialogue {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 3px solid #2563eb;
+}
+.dialogue strong {
+  color: #2563eb;
+}
+.quick-ref {
+  background: white;
+  padding: 30px;
+  margin: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.practice-box {
+  background: #fef3c7;
+  padding: 25px;
+  margin: 25px 40px;
+  border-radius: 12px;
+  border-left: 5px solid #f59e0b;
+}

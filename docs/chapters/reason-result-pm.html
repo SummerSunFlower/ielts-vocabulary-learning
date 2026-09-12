@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reason & Result — PM 项目管理场景</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>🔵 Reason & Result</h1>
+      <p>Project Management 项目管理定制版</p>
+      <p style="font-size: 0.95rem;">基于《Check Your English Vocabulary for IELTS》第98-99页 · 适用角色：PM / 项目负责人（技术背景）</p>
+    </div>
+
+    <!-- Back to Home -->
+    <nav class="nav">
+      <a href="../index.html">← 返回首页</a>
+      <a href="reason-result.html">Application Support 版</a>
+    </nav>
+
+    <div class="content">
+      <!-- Framework -->
+      <div class="chapter-card">
+        <h2>📌 核心词汇框架</h2>
+        <h3>词类分类</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词类</th>
+              <th>含义</th>
+              <th>PM 场景应用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>原因类</strong></td>
+              <td>解释"为什么"</td>
+              <td>延期原因、里程碑偏差解释、决策依据</td>
+            </tr>
+            <tr>
+              <td><strong>目的类</strong></td>
+              <td>表达"为了"</td>
+              <td>资源调配目的、流程改进初衷、缓解措施意图</td>
+            </tr>
+            <tr>
+              <td><strong>结果类</strong></td>
+              <td>描述"结果"</td>
+              <td>延期影响、依赖阻塞后果、交付效果</td>
+            </tr>
+            <tr>
+              <td><strong>动机类</strong></td>
+              <td>深层原因</td>
+              <td>范围取舍动机、优先级排序逻辑</td>
+            </tr>
+            <tr>
+              <td><strong>影响类</strong></td>
+              <td>描述"对…产生影响"</td>
+              <td>风险对关键路径的影响、变更对范围的影响</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Category 1: Reason -->
+      <div class="chapter-card">
+        <h2>🔵 原因类词汇 — 延期解释与决策依据</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>due to</code></td>
+              <td>+ 名词短语，"由于"</td>
+              <td>The release is delayed <code>due to</code> unresolved integration issues.</td>
+            </tr>
+            <tr>
+              <td><code>owing to</code></td>
+              <td>+ 名词短语，"归因于"</td>
+              <td>The milestone slipped <code>owing to</code> a dependency on the vendor team.</td>
+            </tr>
+            <tr>
+              <td><code>on account of</code></td>
+              <td>+ 名词短语，"因为"</td>
+              <td>Testing was postponed <code>on account of</code> the environment outage.</td>
+            </tr>
+            <tr>
+              <td><code>the reason for</code></td>
+              <td>+ 名词/动名词，"…的原因"</td>
+              <td>What was <code>the reason for</code> the two-day delay in UAT sign-off?</td>
+            </tr>
+            <tr>
+              <td><code>on the grounds that</code></td>
+              <td>+ 从句，"基于…的理由"</td>
+              <td>We descoped the module <code>on the grounds that</code> it was not on the critical path.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 PM 场景提示：</strong> 这五个词在 status report、变更申请（Change Request）和风险登记册（Risk Register）中高频出现。</p>
+          <p>The release is delayed <code>due to</code> unresolved integration issues between the payment service and the loyalty API.<br>（本次发布因支付服务与会员积分 API 之间未解决的集成问题而延期。）</p>
+          <p>We deferred the data migration <code>on the grounds that</code> it carried unacceptable regression risk before go-live.<br>（我们推迟了数据迁移，理由是它在上线前带有不可接受的回归风险。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Category 2: Purpose -->
+      <div class="chapter-card">
+        <h2>🟡 目的类词汇 — 决策与行动目的说明</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>in order to</code></td>
+              <td>+ 动词原形，"为了"（正式）</td>
+              <td>We reallocated two engineers <code>in order to</code> protect the critical path.</td>
+            </tr>
+            <tr>
+              <td><code>so as not to</code></td>
+              <td>+ 动词原形，"为了不"</td>
+              <td>We froze the code base <code>so as not to</code> destabilize the release candidate.</td>
+            </tr>
+            <tr>
+              <td><code>with the aim of</code></td>
+              <td>+ 动名词，"目的是"</td>
+              <td>We introduced a weekly risk review <code>with the aim of</code> catching blockers earlier.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 PM 场景提示：</strong> 说明资源调配、流程变更、缓解措施（mitigation）的合理性时使用，是向 sponsor 争取支持的利器。</p>
+          <p>We scheduled the cutover rehearsal on Saturday <code>so as not to</code> disrupt the business-critical batch jobs.<br>（我们把切换演练安排在周六，以免干扰业务关键的批处理任务。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Category 3: Result -->
+      <div class="chapter-card">
+        <h2>🟢 结果类词汇 — 影响评估与交付效果</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>ensued</code></td>
+              <td>v. （不及物动词）随之发生</td>
+              <td>A two-week delay <code>ensued</code> after the vendor missed the interface deadline.</td>
+            </tr>
+            <tr>
+              <td><code>as a result</code></td>
+              <td>连接词短语，"结果是"</td>
+              <td>The API contract changed late, and <code>as a result</code> our test cases had to be rewritten.</td>
+            </tr>
+            <tr>
+              <td><code>as a consequence</code></td>
+              <td>连接词短语，"因此"</td>
+              <td>The integration slipped, and <code>as a consequence</code> UAT started one week late.</td>
+            </tr>
+            <tr>
+              <td><code>affect</code></td>
+              <td>v. 影响（及物，不加 to）</td>
+              <td>This delay will <code>affect</code> the go-live date and the marketing campaign launch.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 PM 场景提示：</strong> 在 impact assessment（影响评估）和干系人汇报中量化"拖延的代价"。</p>
+          <p>If the vendor misses the next interface deadline, further slippage <code>will ensue</code> across all downstream milestones.<br>（如果供应商错过下一个接口交付期限，所有下游里程碑都会随之进一步延期。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Category 4: Motive/Consequence -->
+      <div class="chapter-card">
+        <h2>🔴 动机/后果类词汇 — 干系人沟通与取舍说明</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>含义</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>motive</code></td>
+              <td>n. 动机，意图</td>
+              <td>What was the <code>motive</code> behind pulling the feature into this release?</td>
+            </tr>
+            <tr>
+              <td><code>effect</code></td>
+              <td>n. 效果，影响</td>
+              <td>The daily sync had an immediate positive <code>effect</code> on dependency resolution.</td>
+            </tr>
+            <tr>
+              <td><code>consequence</code></td>
+              <td>n. 后果</td>
+              <td>We must weigh the <code>consequences</code> of going live with known defects.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Scenario 1: Delay Notification -->
+      <div class="chapter-card">
+        <h2>🎯 场景一：延期通知（Delay Notification）</h2>
+        <p><strong>流程：</strong> 进度现状 → 延期原因 → 影响评估 → 补救措施 → 新预期</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步骤</th>
+              <th>模板</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>进度现状</strong></td>
+              <td>Current status: X is behind schedule by...</td>
+              <td>Current status: the integration workstream is behind schedule by two weeks.</td>
+            </tr>
+            <tr>
+              <td><strong>延期原因</strong></td>
+              <td>This is due to / owing to...</td>
+              <td>This is <code>due to</code> unresolved integration issues on the vendor side.</td>
+            </tr>
+            <tr>
+              <td><strong>影响评估</strong></td>
+              <td>As a consequence, X will affect Y...</td>
+              <td><code>As a consequence</code>, this will <code>affect</code> UAT and push go-live to Oct 15.</td>
+            </tr>
+            <tr>
+              <td><strong>补救措施</strong></td>
+              <td>We are doing X in order to...</td>
+              <td>We are adding a contractor <code>in order to</code> compress the remaining test cycle.</td>
+            </tr>
+            <tr>
+              <td><strong>新预期</strong></td>
+              <td>As a result, we expect...</td>
+              <td><code>As a result</code>, we expect to recover three days before the next milestone.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> Current status: the release is delayed by two weeks <code>due to</code> unresolved integration issues between the order service and the vendor's inventory API. <code>As a consequence</code>, UAT will start one week later and <code>affect</code> the October go-live window. We have reallocated two engineers and engaged the vendor's escalation manager <code>in order to</code> protect the remaining milestones. <code>As a result</code>, we expect to recover three days by the next status meeting.</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 2: Risk Escalation -->
+      <div class="chapter-card">
+        <h2>🎯 场景二：风险上报（Risk Escalation）</h2>
+        <p><strong>流程：</strong> 风险描述 → 触发原因 → 影响评估 → 缓解措施 → 预期效果</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步骤</th>
+              <th>模板</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>风险描述</strong></td>
+              <td>There is a risk that X may occur...</td>
+            </tr>
+            <tr>
+              <td><strong>触发原因</strong></td>
+              <td>This risk arises owing to / on account of...</td>
+            </tr>
+            <tr>
+              <td><strong>影响评估</strong></td>
+              <td>If X occurs, as a consequence, ...</td>
+            </tr>
+            <tr>
+              <td><strong>缓解措施</strong></td>
+              <td>We are doing Y with the aim of...</td>
+            </tr>
+            <tr>
+              <td><strong>预期效果</strong></td>
+              <td>As a result, we expect to reduce the impact to...</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> There is a risk that the legacy data migration will overrun its window. This risk arises <code>owing to</code> undocumented data quality issues in the old system. If the overrun occurs, <code>as a consequence</code> the cutover will extend into Monday morning and <code>affect</code> day-one operations. We are running a full dry-run migration this weekend <code>with the aim of</code> validating the timing. <code>As a result</code>, we expect to reduce the residual risk to low before go-live.</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 1 -->
+      <div class="chapter-card">
+        <h2>💬 对话一：向 Sponsor 解释延期两周（含补救方案）</h2>
+        <blockquote>
+          <p><strong>PM:</strong> Thanks for making time, Sarah. I need to walk you through a schedule change on the lululemon integration release.</p>
+          <p><strong>Sponsor:</strong> Okay, give it to me straight. How bad is it?</p>
+          <p><strong>PM:</strong> The release is delayed by two weeks <code>due to</code> unresolved integration issues between our order service and the vendor's inventory API.</p>
+          <p><strong>Sponsor:</strong> Two weeks? I presented October 1st to the board last month. What exactly went wrong?</p>
+          <p><strong>PM:</strong> The vendor delivered the interface spec late, and when we integrated it, the payload format didn't match what we'd built against. Rework <code>ensued</code> on both sides.</p>
+          <p><strong>Sponsor:</strong> Why didn't we catch that earlier?</p>
+          <p><strong>PM:</strong> Fair question. We had contract tests, but they ran against a mock. The mock was built from the early draft spec <code>owing to</code> a version mix-up on the vendor's portal.</p>
+          <p><strong>Sponsor:</strong> So what's the impact beyond the two weeks?</p>
+          <p><strong>PM:</strong> <code>As a consequence</code>, UAT shifts by one week and go-live moves to October 15th. It doesn't <code>affect</code> the holiday freeze in November, so we still have buffer.</p>
+          <p><strong>Sponsor:</strong> And what are you doing about it?</p>
+          <p><strong>PM:</strong> Two things. First, we reallocated two backend engineers <code>in order to</code> protect the critical path. Second, we've asked the vendor to assign a dedicated engineer to our account.</p>
+          <p><strong>Sponsor:</strong> What's the <code>motive</code> behind pulling the engineers off the reporting workstream?</p>
+          <p><strong>PM:</strong> Simple trade-off: reporting isn't on the critical path, integration is. We made that call <code>on the grounds that</code> protecting go-live matters more than a parallel feature.</p>
+          <p><strong>Sponsor:</strong> I see. Are you confident in the new date?</p>
+          <p><strong>PM:</strong> Reasonably. We've added a mid-point checkpoint in ten days <code>with the aim of</code> catching any further drift early. <code>As a result</code> of the reallocation, we expect to recover three of the fourteen days.</p>
+          <p><strong>Sponsor:</strong> Okay. Send me the revised plan today, and flag it in the weekly report as amber, not red.</p>
+          <p><strong>PM:</strong> Will do. I'll update the risk register too, <code>so as not to</code> let the vendor dependency slip through untracked again.</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 2 (shortened) -->
+      <div class="chapter-card">
+        <h2>💬 对话二：风险评审会（上报集成风险，节选）</h2>
+        <blockquote>
+          <p><strong>PM:</strong> Next up is the integration risk I logged last week. There is a real risk that the migration overruns its weekend window. The trigger is <code>owing to</code> undocumented data quality issues in the legacy system.</p>
+          <p><strong>Sponsor:</strong> How likely is that, honestly?</p>
+          <p><strong>PM:</strong> Moderate probability, high impact. If the overrun occurs, <code>as a consequence</code> the cutover extends into Monday morning, which will <code>affect</code> day-one store operations.</p>
+          <p><strong>PM:</strong> So we run a full dry-run migration this weekend <code>with the aim of</code> validating the actual timing against our estimate.</p>
+          <p><strong>Tech Lead:</strong> I'd also add a dedup pass before the real cutover <code>in order to</code> shrink the dataset.</p>
+          <p><strong>PM:</strong> Then if the dry-run still shows we can't finish in the window, we go with a phased cutover. We'd choose that <code>on the grounds that</code> a shorter window per batch is far lower risk than one long one. <code>As a result</code> of these mitigations, I'll downgrade the residual risk from high to medium after the dry-run results come in.</p>
+        </blockquote>
+      </div>
+
+      <div class="chapter-card">
+        <h2>📊 PM 场景速查表</h2>
+        <h3>进度汇报（周报 / Status Update）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>进度延期</strong></td>
+              <td>The release is delayed / behind schedule due to...</td>
+            </tr>
+            <tr>
+              <td><strong>偏差原因</strong></td>
+              <td>The variance is owing to / on account of...</td>
+            </tr>
+            <tr>
+              <td><strong>影响评估</strong></td>
+              <td>As a consequence, this will affect X / push go-live to...</td>
+            </tr>
+            <tr>
+              <td><strong>补救措施</strong></td>
+              <td>We are doing X in order to protect the critical path.</td>
+            </tr>
+            <tr>
+              <td><strong>新预期</strong></td>
+              <td>As a result, we expect to recover X days by...</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>风险上报（Risk Register / 评审会）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>描述风险</strong></td>
+              <td>There is a risk that X may occur...</td>
+            </tr>
+            <tr>
+              <td><strong>触发原因</strong></td>
+              <td>This risk arises owing to / on account of...</td>
+            </tr>
+            <tr>
+              <td><strong>潜在后果</strong></td>
+              <td>If X occurs, as a consequence, ...</td>
+            </tr>
+            <tr>
+              <td><strong>缓解措施</strong></td>
+              <td>We are doing Y with the aim of reducing the impact.</td>
+            </tr>
+            <tr>
+              <td><strong>决策理由</strong></td>
+              <td>We chose the phased approach on the grounds that...</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>资源协调（借调 / Descope / 变更）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>说明目的</strong></td>
+              <td>We reallocated two engineers in order to unblock integration.</td>
+            </tr>
+            <tr>
+              <td><strong>说明动机</strong></td>
+              <td>The motive behind the descope was to keep go-live fixed.</td>
+            </tr>
+            <tr>
+              <td><strong>说明理由</strong></td>
+              <td>We deferred X on the grounds that it's not on the critical path.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="chapter-card">
+        <h2>🚀 实战练习（PM 场景）</h2>
+        <h3>练习一：周报填空</h3>
+        <blockquote>
+          <p><strong>Status Report:</strong> The integration workstream is behind schedule by one week __________ a late interface delivery from the vendor. __________, UAT will start five days late and __________ the October go-live window. We have added a contractor __________ to compress the remaining test cycle. __________, we expect to recover two days before the next milestone.</p>
+        </blockquote>
+        <h3>练习二：风险上报填空</h3>
+        <blockquote>
+          <p><strong>Risk Review:</strong> There is a risk that the cutover overruns its window, arising __________ data quality issues in the legacy system. If it occurs, __________, store operations will be __________ on Monday morning. We are running a dry-run migration __________ the aim of validating the timing. __________, residual risk should drop to low.</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>📚 IELTS Vocabulary Learning Project</p>
+      <p style="margin-top: 10px; opacity: 0.8;">Customized for Project Management Scenarios</p>
+      <p style="margin-top: 10px; opacity: 0.8;">适配角色：PM / 项目负责人（技术背景）</p>
+    </div>
+  </div>
+</body>
+</html>

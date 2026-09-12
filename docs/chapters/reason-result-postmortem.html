@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reason &amp; Result — 事故报告书面版</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .content h2 {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 45px;
+      font-size: 1.3rem;
+    }
+    .content table {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="chapter-header">
+    <h1>Reason &amp; Result — Postmortem / RCA</h1>
+    <p>事故报告书面定制版 · 书面正式语体</p>
+  </div>
+  <a class="back-link" href="../index.html">← 返回首页</a>
+  <div class="container">
+    <div class="content">
+      <blockquote>
+        <p>来源：《Check Your English Vocabulary for IELTS》第98–99页<br>
+        定制场景：Application Support — 事故报告书面写作（Postmortem / Root Cause Analysis）<br>
+        语体要求：书面正式语体 —— 优先正式词（owing to / as a consequence / on the grounds that / ensued / subsequently / thereby）、适度被动语态、避免口语缩写（do not 而非 don't）</p>
+      </blockquote>
+
+      <h2>📌 核心词汇框架（15词全覆盖）</h2>
+      <table>
+        <thead>
+          <tr><th>词类</th><th>词汇</th><th>Postmortem 场景应用</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>原因类</strong></td><td><code>due to</code>, <code>owing to</code>, <code>on account of</code>, <code>the reason for</code>, <code>on the grounds that</code></td><td>根因陈述、故障归因、决策依据说明</td></tr>
+          <tr><td><strong>目的类</strong></td><td><code>in order to</code>, <code>so as not to</code>, <code>with the aim of</code></td><td>纠正/预防措施的目的说明</td></tr>
+          <tr><td><strong>结果类</strong></td><td><code>ensued</code>, <code>as a result</code>, <code>as a consequence</code>, <code>affect</code></td><td>Timeline、Impact Analysis 影响链描述</td></tr>
+          <tr><td><strong>动机/后果类</strong></td><td><code>motive</code>, <code>effect</code>, <code>consequence</code></td><td>决策动机分析、措施效果评估、后果定性</td></tr>
+        </tbody>
+      </table>
+      <blockquote><p>💡 <strong>书面语提示</strong>：Postmortem 中原因类首选 <code>owing to</code>（比 due to 正式），结果类首选 <code>as a consequence</code>（比 as a result 正式），搭配被动语态增强客观性。</p></blockquote>
+
+      <h2>🔄 书面 vs 口语 表达对照表（重点！）</h2>
+      <table>
+        <thead>
+          <tr><th>口语表达</th><th>书面正式表达</th><th>例句</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>because of / due to</td><td><code>owing to</code></td><td>Service degraded <code>owing to</code> connection pool exhaustion.</td></tr>
+          <tr><td>so</td><td><code>thereby</code></td><td>The patch was applied, <code>thereby</code> restoring normal traffic flow.</td></tr>
+          <tr><td>we found out</td><td><code>It was determined that... / Subsequent investigation revealed...</code></td><td><code>Subsequent investigation revealed</code> a memory leak in the payment module.</td></tr>
+          <tr><td>as a result</td><td><code>as a consequence / consequently</code></td><td><code>As a consequence</code>, error rates climbed to 31%.</td></tr>
+          <tr><td>it happened because</td><td><code>The reason for... was...</code></td><td><code>The reason for</code> the prolonged downtime was the absence of automated rollback triggers.</td></tr>
+          <tr><td>we chose X because</td><td><code>X was adopted on the grounds that...</code></td><td>The release was promoted <code>on the grounds that</code> all integration tests had passed.</td></tr>
+          <tr><td>it broke things</td><td><code>X was affected / X ensued</code></td><td>A cascading failure <code>ensued</code> when the connection pool was exhausted.</td></tr>
+          <tr><td>we did X to Y</td><td><code>X was implemented in order to Y</code></td><td>Canary deployment was adopted <code>in order to</code> limit the blast radius.</td></tr>
+          <tr><td>we wanted to avoid</td><td><code>so as not to</code></td><td>Deployments are frozen during peak hours <code>so as not to</code> disrupt revenue-critical flows.</td></tr>
+          <tr><td>our goal was</td><td><code>with the aim of</code></td><td>Pool-exhaustion alerts were configured <code>with the aim of</code> detecting leaks within five minutes.</td></tr>
+          <tr><td>why we did it</td><td><code>The motive behind... was...</code></td><td><code>The motive behind</code> bypassing the staging soak test was schedule pressure.</td></tr>
+          <tr><td>it hit X users</td><td><code>X users were affected</code></td><td>Approximately 9,800 active customers <code>were affected</code>.</td></tr>
+          <tr><td>don't / can't / didn't</td><td><code>do not / cannot / did not</code></td><td>The tests <code>did not</code> cover the exception-handling path.</td></tr>
+        </tbody>
+      </table>
+      <blockquote><p>💡 <strong>被动语态三件套</strong>（Postmortem 高频）：<code>It was determined that...</code> / <code>The outage was attributed to...</code> / <code>Subsequent investigation revealed...</code></p></blockquote>
+
+      <h2>📝 核心词汇详解 + Postmortem 书面例句</h2>
+
+      <h3>🔵 原因类 — 根因陈述与归因</h3>
+      <table>
+        <thead><tr><th>词汇</th><th>用法</th><th>正式度</th></tr></thead>
+        <tbody>
+          <tr><td><code>due to</code></td><td>+ 名词短语</td><td>中性，通用</td></tr>
+          <tr><td><code>owing to</code></td><td>+ 名词短语</td><td>★ 最正式，Postmortem 首选</td></tr>
+          <tr><td><code>on account of</code></td><td>+ 名词短语</td><td>正式，多用于补充说明</td></tr>
+          <tr><td><code>the reason for</code></td><td>+ 名词/动名词</td><td>显式回答"为什么"</td></tr>
+          <tr><td><code>on the grounds that</code></td><td>+ 从句</td><td>书面陈述决策依据</td></tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>The initial latency spike was <code>due to</code> lock contention on the inventory table.<br>（最初的延迟飙升是由于库存表上的锁竞争。）</p>
+        <p>Service degradation <code>owing to</code> connection pool exhaustion was first observed at 13:45 UTC.<br>（UTC 13:45 首次观察到因连接池耗尽导致的服务降级。）</p>
+        <p>Two scheduled batch jobs were suspended <code>on account of</code> elevated error rates.<br>（由于错误率升高，两个定时批处理任务被暂停。）</p>
+        <p><code>The reason for</code> the prolonged downtime was the absence of automated rollback triggers.<br>（停机时间过长的原因在于缺少自动回滚触发机制。）</p>
+        <p>The release was promoted to production <code>on the grounds that</code> all integration tests had passed.<br>（该版本之所以被推进到生产环境，理由是所有集成测试均已通过。）</p>
+      </blockquote>
+
+      <h3>🟡 目的类 — 纠正与预防措施说明</h3>
+      <table>
+        <thead><tr><th>词汇</th><th>用法</th><th>书面提示</th></tr></thead>
+        <tbody>
+          <tr><td><code>in order to</code></td><td>+ 动词原形</td><td>Corrective Actions 首选，比 to 正式</td></tr>
+          <tr><td><code>so as not to</code></td><td>+ 动词原形</td><td>书面否定目的；口语多说 so that we don't</td></tr>
+          <tr><td><code>with the aim of</code></td><td>+ 动名词</td><td>说明长期预防目标（Preventive Actions）</td></tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>A canary deployment strategy has been adopted <code>in order to</code> limit the blast radius of future releases.<br>（已采用金丝雀发布策略，以限制未来发布的故障波及范围。）</p>
+        <p>Deployments are now frozen during peak trading hours <code>so as not to</code> disrupt revenue-critical flows.<br>（现在高峰交易时段冻结部署，以免干扰对营收至关重要的业务流。）</p>
+        <p>Connection-pool utilization alerts were configured <code>with the aim of</code> detecting leaks within five minutes.<br>（已配置连接池利用率告警，目的是在五分钟内检测到连接泄漏。）</p>
+      </blockquote>
+
+      <h3>🟢 结果类 — 时间线与影响描述</h3>
+      <table>
+        <thead><tr><th>词汇</th><th>用法</th><th>Postmortem 位置</th></tr></thead>
+        <tbody>
+          <tr><td><code>ensued</code></td><td>不及物动词，随之发生</td><td>Timeline 中描述连锁反应</td></tr>
+          <tr><td><code>as a result</code></td><td>连接短语</td><td>描述行动后的直接结果</td></tr>
+          <tr><td><code>as a consequence</code></td><td>连接短语（更正式）</td><td>Impact Analysis 中描述业务后果</td></tr>
+          <tr><td><code>affect</code></td><td>及物动词，影响</td><td>Impact Analysis 中陈述影响范围</td></tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>A cascading failure <code>ensued</code> when the connection pool was exhausted.<br>（连接池耗尽后，级联故障随之发生。）</p>
+        <p>The rollback was executed at 14:32 UTC, and <code>as a result</code>, error rates returned to baseline within eight minutes.<br>（回滚于 UTC 14:32 执行，结果错误率在八分钟内回到基线水平。）</p>
+        <p><code>As a consequence</code>, the payment gateway began rejecting new sessions.<br>（因此，支付网关开始拒绝新建会话。）</p>
+        <p>The outage <code>affected</code> approximately 9,800 active customers across all regions.<br>（此次故障影响了所有区域约 9,800 名活跃客户。）</p>
+      </blockquote>
+
+      <h3>🔴 动机/后果类 — 决策分析与后果定性</h3>
+      <table>
+        <thead><tr><th>词汇</th><th>含义</th><th>Postmortem 位置</th></tr></thead>
+        <tbody>
+          <tr><td><code>motive</code></td><td>n. 动机</td><td>Root Cause / Lessons Learned 中分析决策动机</td></tr>
+          <tr><td><code>effect</code></td><td>n. 效果</td><td>评估纠正措施的效果</td></tr>
+          <tr><td><code>consequence</code></td><td>n. 后果</td><td>Impact Analysis 中定性最严重后果</td></tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p><code>The motive behind</code> bypassing the staging soak test was schedule pressure from the Q2 roadmap.<br>（跳过预发环境浸泡测试的动机，是 Q2 路线图带来的排期压力。）</p>
+        <p>The rollback had an <code>immediate positive effect</code> on error rates and checkout latency.<br>（回滚对错误率和结账延迟产生了立竿见影的积极效果。）</p>
+        <p>The most serious <code>consequence</code> of the incident was the SLA breach on the checkout endpoint.<br>（此次事故最严重的后果是结账接口的 SLA 违约。）</p>
+      </blockquote>
+
+      <h2>🎯 Postmortem 六大章节：书面句式框架</h2>
+
+      <h3>1️⃣ Executive Summary（故障概述：现象+影响+根因+解决）</h3>
+      <blockquote>
+        <p>On 12 March 2026, the checkout service experienced a complete outage lasting 47 minutes. Approximately 9,800 customers <code>were affected</code>, and an estimated $18,000 in revenue was lost. <code>It was determined that</code> the outage was attributable to a memory leak introduced by release v2.14.0. Service was restored following an emergency rollback executed at 14:32 UTC.<br>（2026年3月12日，结账服务经历了持续47分钟的完全停机。约9,800名客户受到影响，预计损失营收1.8万美元。经确认，故障归因于 v2.14.0 版本引入的内存泄漏。服务在 UTC 14:32 执行紧急回滚后恢复。）</p>
+      </blockquote>
+
+      <h3>2️⃣ Timeline（时间线，因果词串联）</h3>
+      <blockquote>
+        <p>13:38 UTC — Release v2.14.0 was promoted to production <code>on the grounds that</code> all integration tests had passed.（版本因集成测试通过被推进至生产环境。）</p>
+        <p>13:45 UTC — Latency alarms fired; service degradation <code>owing to</code> rising heap usage was first observed.（延迟告警触发；首次观察到因堆内存上升导致的服务降级。）</p>
+        <p>13:52 UTC — Connection pool exhaustion <code>ensued</code>, and a cascading failure spread to the order service.（连接池耗尽随之发生，级联故障蔓延至订单服务。）</p>
+        <p>14:02 UTC — Two batch jobs were suspended <code>on account of</code> elevated error rates.（因错误率升高，两个批处理任务被暂停。）</p>
+        <p>14:32 UTC — An emergency rollback was executed <code>in order to</code> restore service availability.（为恢复服务可用性，执行了紧急回滚。）</p>
+        <p>14:40 UTC — <code>As a result</code>, error rates returned to baseline and the incident was closed.（结果错误率回到基线，事故关闭。）</p>
+      </blockquote>
+
+      <h3>3️⃣ Impact Analysis（影响分析：users / revenue / SLA）</h3>
+      <blockquote>
+        <p>The outage <code>affected</code> approximately 9,800 active customers, of whom 12.4% experienced failed checkout attempts. <code>As a consequence</code>, an estimated $18,000 in revenue was lost. The incident resulted in an <strong>SLA breach</strong> of 47 minutes against the 99.95% availability target. Downstream reporting services <code>were affected on account of</code> suspended batch jobs.<br>（此次故障影响了约9,800名活跃客户，其中12.4%结账失败。因此预计损失营收1.8万美元。事故导致违反99.95%可用性目标，SLA 违约47分钟。下游报表服务因批处理任务暂停而受影响。）</p>
+      </blockquote>
+
+      <h3>4️⃣ Root Cause Analysis（根因分析，被动语态归因）</h3>
+      <blockquote>
+        <p><code>It was determined that</code> the immediate trigger was connection pool exhaustion. <code>Subsequent investigation revealed</code> that connections were never released in the exception-handling path <code>owing to</code> a missing <code>finally</code> block. The root cause was determined to be a code defect introduced in v2.14.0, compounded by insufficient test coverage <code>on the grounds that</code> the exception path had not been exercised. <code>The motive behind</code> deferring the additional test work was schedule pressure.<br>（经确认，直接触发因素是连接池耗尽。后续调查发现，异常处理路径中因缺少 finally 块导致连接从未释放。根本原因确认为 v2.14.0 引入的代码缺陷，且由于异常路径未被测试覆盖，问题进一步放大。推迟补充测试工作的动机是排期压力。）</p>
+      </blockquote>
+
+      <h3>5️⃣ Corrective &amp; Preventive Actions（纠正与预防措施）</h3>
+      <blockquote>
+        <p>A canary deployment strategy has been adopted <code>in order to</code> limit the blast radius of future releases.（已采用金丝雀发布策略，以限制未来发布的故障波及范围。）</p>
+        <p>Connection-pool utilization alerts were configured <code>with the aim of</code> detecting leaks within five minutes.（已配置连接池利用率告警，目的是五分钟内发现连接泄漏。）</p>
+        <p>Deployments are frozen during peak trading hours <code>so as not to</code> disrupt revenue-critical flows.（高峰交易时段冻结部署，以免影响营收关键业务流。）</p>
+        <p>Exception-path unit tests are now mandatory <code>on the grounds that</code> untested error handling caused this incident.（异常路径单元测试现已成为强制要求，理由是未经测试的异常处理引发了本次事故。）</p>
+      </blockquote>
+
+      <h3>6️⃣ Lessons Learned（经验教训）</h3>
+      <blockquote>
+        <p><strong>What went well:</strong> The rollback procedure had an immediate positive <code>effect</code> on service health and was completed within eight minutes.（回滚流程对服务健康产生了立竿见影的积极效果，八分钟内完成。）</p>
+        <p><strong>What went wrong:</strong> The most serious <code>consequence</code> was the SLA breach; <code>the reason for</code> the extended impact was the absence of automated rollback triggers.（最严重的后果是 SLA 违约；影响扩大的原因在于缺少自动回滚触发机制。）</p>
+        <p><strong>Where we got lucky:</strong> The timing limited the number of <code>affected</code> users; had it coincided with APAC peak hours, the impact would have been significantly greater.（幸运的是事故未与 APAC 高峰重叠，否则受影响用户将显著增加。）</p>
+      </blockquote>
+
+      <h2>📄 完整 Postmortem 范文（节选，含中文翻译）</h2>
+      <blockquote>
+        <p>On 12 March 2026, the checkout service experienced a complete outage lasting 47 minutes, during which approximately 9,800 active customers <code>were affected</code>. Release v2.14.0 had been promoted to production <code>on the grounds that</code> all integration tests had passed, although the exception-handling path <code>was not</code> covered by the test suite. Forty minutes later, connection pool exhaustion <code>ensued owing to</code> a memory leak caused by connections that were never released. <code>As a consequence</code>, the payment gateway began rejecting new sessions, and a cascading failure spread to the order service. <code>The reason for</code> the prolonged downtime was the absence of automated rollback triggers; two batch jobs were additionally suspended <code>on account of</code> elevated error rates. An emergency rollback was executed at 14:32 UTC <code>in order to</code> restore service availability, and it had an <code>immediate positive effect</code> on error rates, which returned to baseline within eight minutes. <code>As a result</code>, the incident was formally closed at 14:40 UTC. <code>It was determined that</code> the root cause was a code defect introduced by v2.14.0, and <code>subsequent</code> investigation revealed that heap usage had been rising for days <code>due to</code> the same leak. <code>The motive behind</code> skipping the staging soak test was schedule pressure from the Q2 roadmap. The most serious <code>consequence</code> of the incident was an SLA breach of 47 minutes. Going forward, canary deployments have been adopted <code>with the aim of</code> limiting the blast radius, and deployments are frozen during peak hours <code>so as not to</code> disrupt revenue-critical flows.</p>
+        <p>（中文翻译：2026年3月12日，结账服务经历了持续47分钟的完全停机，期间约9,800名活跃客户受到影响。v2.14.0 版本之所以被推进到生产环境，理由是所有集成测试均已通过，尽管测试套件并未覆盖异常处理路径。四十分钟后，因从未释放的连接引发内存泄漏，连接池耗尽随之发生。因此，支付网关开始拒绝新建会话，级联故障蔓延至订单服务。停机时间过长的原因在于缺少自动回滚触发机制；此外，因错误率升高，两个批处理任务被暂停。为恢复服务可用性，UTC 14:32 执行了紧急回滚，回滚对错误率产生了立竿见影的积极效果，八分钟内即回到基线。结果，事故于 UTC 14:40 正式关闭。经确认，根本原因是 v2.14.0 引入的代码缺陷；后续调查还发现，数日以来堆内存一直因同一泄漏而持续上升。跳过预发环境浸泡测试的动机是 Q2 路线图带来的排期压力。此次事故最严重的后果是47分钟的 SLA 违约。今后已采用金丝雀发布以限制故障波及范围，并在高峰时段冻结部署以免干扰营收关键业务流。）</p>
+      </blockquote>
+      <p>✅ 完整版（约230英文词、逐句中文翻译、15词核对清单）见 Markdown 版《Reason_Result_事故报告_书面版.md》。</p>
+
+      <h2>🔗 RCA 5 Whys 因果链示例</h2>
+      <table>
+        <thead><tr><th>层级</th><th>Why</th><th>书面回答</th></tr></thead>
+        <tbody>
+          <tr><td>Why 1</td><td>Why did the checkout service fail?</td><td>Service failed <code>owing to</code> connection pool exhaustion.（因连接池耗尽而失败。）</td></tr>
+          <tr><td>Why 2</td><td>Why was the connection pool exhausted?</td><td>Connections were never released <code>due to</code> a memory leak in the exception path.（因异常路径内存泄漏，连接从未释放。）</td></tr>
+          <tr><td>Why 3</td><td>Why were connections never released?</td><td>The code path lacked a <code>finally</code> block, <code>as a consequence of</code> which connections leaked on every timeout.（代码路径缺少 finally 块，因此每次超时都泄漏连接。）</td></tr>
+          <tr><td>Why 4</td><td>Why was this not detected before release?</td><td>The exception path <code>was not</code> tested, <code>on the grounds that</code> it was considered low-priority coverage.（异常路径未被测试，理由是它被视为低优先级覆盖项。）</td></tr>
+          <tr><td>Why 5</td><td>Why was it considered low-priority?</td><td><code>The motive</code> was schedule pressure; <code>consequently</code>, test coverage for error handling was deprioritized.（动机是排期压力，因此异常处理测试被降级。）</td></tr>
+        </tbody>
+      </table>
+      <blockquote><p><strong>根因结论（书面）</strong>：The root cause was determined to be a code defect compounded by process gaps. Corrective actions were therefore prioritized <code>with the aim of</code> addressing both the technical defect and the underlying decision-making culture.（根因确认为代码缺陷叠加流程缺口。因此纠正措施优先针对技术缺陷与底层决策文化两方面。）</p></blockquote>
+
+      <h2>📊 书面句式速查表（按 Postmortem 章节分组）</h2>
+
+      <h3>Executive Summary / Timeline</h3>
+      <table>
+        <thead><tr><th>想表达</th><th>书面表达</th></tr></thead>
+        <tbody>
+          <tr><td><strong>发生了什么</strong></td><td>On [date], [service] experienced [symptom]...</td></tr>
+          <tr><td><strong>归因</strong></td><td>The outage was attributed to... / It was determined that...</td></tr>
+          <tr><td><strong>由于（起因）</strong></td><td>...owing to... / ...due to...</td></tr>
+          <tr><td><strong>随之发生</strong></td><td>...ensued... / Consequently, ...</td></tr>
+          <tr><td><strong>为了止损</strong></td><td>[Action] was taken in order to...</td></tr>
+          <tr><td><strong>恢复正常</strong></td><td>As a result, [metric] returned to baseline.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Impact Analysis / Root Cause</h3>
+      <table>
+        <thead><tr><th>想表达</th><th>书面表达</th></tr></thead>
+        <tbody>
+          <tr><td><strong>影响了</strong></td><td>...affected [N] users / [N] users were affected</td></tr>
+          <tr><td><strong>收入损失</strong></td><td>An estimated [amount] was lost as a consequence of...</td></tr>
+          <tr><td><strong>SLA 违约</strong></td><td>The incident resulted in an SLA breach of [duration]</td></tr>
+          <tr><td><strong>后续调查发现</strong></td><td>Subsequent investigation revealed...</td></tr>
+          <tr><td><strong>决策理由 / 动机</strong></td><td>[Decision] was made on the grounds that... / The motive behind [decision] was...</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Corrective &amp; Preventive Actions / Lessons Learned</h3>
+      <table>
+        <thead><tr><th>想表达</th><th>书面表达</th></tr></thead>
+        <tbody>
+          <tr><td><strong>为了（纠正）</strong></td><td>...was implemented in order to...</td></tr>
+          <tr><td><strong>目的是（预防）</strong></td><td>...with the aim of + 动名词</td></tr>
+          <tr><td><strong>以免（约束）</strong></td><td>...so as not to + 动词原形</td></tr>
+          <tr><td><strong>效果好</strong></td><td>[Action] had a positive effect on...</td></tr>
+          <tr><td><strong>后果严重</strong></td><td>The most serious consequence was...</td></tr>
+        </tbody>
+      </table>
+
+      <h2>🚀 实战练习（Postmortem 文本填空）</h2>
+
+      <h3>练习一：Executive Summary 挖空</h3>
+      <p>填入适当词汇（owing to / were affected / It was determined that / attributed / as a consequence）：</p>
+      <blockquote>
+        <p>On 12 March, the checkout service experienced a 47-minute outage. Approximately 9,800 customers __________. The outage was __________ to a memory leak in the payment module. __________, the incident resulted in an estimated $18,000 revenue loss. __________ the root cause was a missing <code>finally</code> block, and the connection leak persisted __________ the lack of pool-utilization monitoring.</p>
+      </blockquote>
+
+      <h3>练习二：Timeline + Actions 挖空</h3>
+      <p>填入适当词汇（ensued / in order to / on the grounds that / so as not to / as a result / with the aim of）：</p>
+      <blockquote>
+        <p>Release v2.14.0 was promoted to production __________ all integration tests had passed. Twenty minutes later, connection pool exhaustion __________, and a cascading failure spread to the order service. An emergency rollback was executed __________ restore availability. __________, error rates returned to baseline within eight minutes. Canary deployments have since been adopted __________ limiting the blast radius, and peak-hour deployment freezes were introduced __________ disrupt revenue-critical flows.</p>
+      </blockquote>
+
+      <h3>练习三：RCA + Lessons 挖空</h3>
+      <p>填入适当词汇（the reason for / motive / consequence / on account of / affect / effect / subsequently）：</p>
+      <blockquote>
+        <p>__________ the extended downtime was the absence of automated rollback triggers. Two batch jobs were suspended __________ elevated error rates, which continued to __________ reporting services for two hours. The __________ behind skipping the soak test was schedule pressure. __________ investigation revealed the same defect existed in staging logs, but the alerts had been silenced. The most serious __________ was the SLA breach; fortunately, the rollback had an immediate positive __________ on service health.</p>
+      </blockquote>
+
+      <details>
+        <summary><strong>参考答案（点击展开）</strong></summary>
+        <p>练习一：were affected / attributed / As a consequence / It was determined that / owing to</p>
+        <p>练习二：on the grounds that / ensued / in order to / As a result / with the aim of / so as not to</p>
+        <p>练习三：The reason for / on account of / affect / motive / Subsequent / consequence / effect</p>
+      </details>
+
+      <h2>💡 书面写作注意事项</h2>
+      <table>
+        <thead><tr><th>原则</th><th>说明</th><th>示例</th></tr></thead>
+        <tbody>
+          <tr><td><strong>正式词优先</strong></td><td>owing to &gt; due to；as a consequence &gt; so</td><td>Service degraded <code>owing to</code> pool exhaustion.</td></tr>
+          <tr><td><strong>被动语态适度</strong></td><td>客观归因用被动，主动补救用主动</td><td>The outage <code>was attributed to</code>... / We executed the rollback...</td></tr>
+          <tr><td><strong>避免缩写</strong></td><td>do not / cannot / did not</td><td>The tests <code>did not</code> cover the exception path.</td></tr>
+          <tr><td><strong>thereby 连接结果</strong></td><td>比口语 so 正式</td><td>The patch was applied, <code>thereby</code> restoring traffic flow.</td></tr>
+          <tr><td><strong>量化一切</strong></td><td>人数、时长、金额、百分比</td><td><code>affected</code> 9,800 users; <code>47-minute</code> outage; <code>$18,000</code> loss</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>❌ 避免</th><th>✅ 推荐</th></tr></thead>
+        <tbody>
+          <tr><td>The outage was attributed owing to a memory leak.</td><td>The outage was attributed <strong>to</strong> a memory leak.（be attributed to 固定搭配）</td></tr>
+          <tr><td>Owing to we lacked monitoring, ...</td><td><strong>Owing to</strong> the lack of monitoring, ...（owing to + 名词短语）</td></tr>
+          <tr><td>We rolled back cause it broke things.</td><td>The release was rolled back <strong>on the grounds that</strong> it caused transaction failures.</td></tr>
+          <tr><td>As a result of the rollback, so errors dropped.</td><td>The rollback was executed, and <strong>as a result</strong>, error rates dropped.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <p>📚 IELTS Vocabulary Learning Project</p>
+      <p>Reason &amp; Result — Postmortem / RCA 事故报告书面定制版</p>
+      <p>适配角色：Application Support Engineer（L2-L3, Softtek — lululemon）</p>
+    </div>
+  </div>
+</body>
+</html>
