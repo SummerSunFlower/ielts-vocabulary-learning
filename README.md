@@ -2,21 +2,24 @@
 
 基于《Check Your English Vocabulary for IELTS》的专业词汇学习系统，提供精美的 HTML 交互式学习界面。
 
-[![HTML Version](https://img.shields.io/badge/HTML-精美版-blue)](./html/index.html) [![Markdown](https://img.shields.io/badge/Markdown-源文件-green)](./)
+[![HTML Version](https://img.shields.io/badge/HTML-精美版-blue)](https://summersunflower.github.io/ielts-vocabulary-learning/) [![Markdown](https://img.shields.io/badge/Markdown-源文件-green)](./markdown/)
+
+## 🌐 在线访问
+
+**https://summersunflower.github.io/ielts-vocabulary-learning/**
+
+手机、平板、电脑均可直接访问，无需下载。
 
 ---
 
-## 🚀 快速开始
+## 🚀 本地使用（可选）
 
-### 方法 1：直接打开文件
-下载项目后，在浏览器中打开 `html/index.html` 即可开始学习。
-
-### 方法 2：本地服务器（推荐）
 ```bash
-cd html/
+git clone https://github.com/SummerSunFlower/ielts-vocabulary-learning.git
+cd ielts-vocabulary-learning/docs/
 python3 -m http.server 8000
 ```
-然后访问 `http://localhost:8000`
+然后访问 `http://localhost:8000`（或直接用浏览器打开 `docs/index.html`）
 
 ---
 
@@ -25,7 +28,7 @@ python3 -m http.server 8000
 ```
 ielts-vocabulary-learning/
 │
-├── 📂 html/                          # ⭐ HTML 精美版本（推荐）
+├── 📂 docs/                          # ⭐ HTML 学习网站（GitHub Pages 部署目录）
 │   ├── index.html                     # 首页（导航、进度追踪）
 │   ├── chapters/                      # 章节内容
 │   │   ├── how-something-works.html   # Unit 1: How Something Works
@@ -38,18 +41,17 @@ ielts-vocabulary-learning/
 │       └── css/
 │           └── style.css              # 样式表
 │
-└── 📄 Markdown 源文件（便于编辑）
-    └── markdown/
-        ├── How_Something_Works_词汇笔记.md
-        ├── Reason_Result_ApplicationSupport_定制版.md
-        ├── Reason_Result_练习集.md
-        └── Reason_Result_严格测试.md
+└── 📂 markdown/                       # Markdown 源文件（便于编辑）
+    ├── How_Something_Works_词汇笔记.md
+    ├── Reason_Result_ApplicationSupport_定制版.md
+    ├── Reason_Result_练习集.md
+    └── Reason_Result_严格测试.md
 ```
 
 ### 💡 为什么有两个版本？
 
-- **HTML 版本（`./html/`）：** 精美设计，交互式学习，适合日常使用
-- **Markdown 版本（根目录）：** 纯文本格式，方便用任何编辑器修改内容
+- **HTML 版本（`docs/`）：** 精美设计，交互式学习，适合日常使用，已部署为在线网站
+- **Markdown 版本（`markdown/`）：** 纯文本格式，方便用任何编辑器修改内容
 
 ---
 
@@ -77,18 +79,10 @@ ielts-vocabulary-learning/
 
 ---
 
-## 📖 源文件
-
-Markdown 源文件保留在根目录，方便：
-- ✏️ 快速编辑内容
-- 🔄 版本控制追踪
-- 🤝 协作修改
-
----
-
 ## 🛠️ 技术栈
 
 - **前端：** HTML5 + CSS3
+- **部署：** GitHub Pages（静态托管）
 - **设计：** 响应式设计、CSS Grid、Flexbox
 - **特色：** 渐变背景、卡片布局、流畅动画
 
@@ -102,4 +96,4 @@ Markdown 源文件保留在根目录，方便：
 
 **项目创建：** 2026-03-19  
 **HTML 版本：** 2026-05-09  
-**最后更新：** 2026-05-09
+**在线部署：** 2026-09-12
