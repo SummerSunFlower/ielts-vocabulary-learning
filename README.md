@@ -36,11 +36,18 @@ ielts-vocabulary-learning/
 │   │   ├── reason-result-postmortem.html # Unit 2 场景: 事故报告书面版
 │   │   ├── reason-result-pm.html      # Unit 2 场景: PM 项目管理
 │   │   ├── reason-result-agile.html   # Unit 2 场景: 敏捷会议
-│   │   └── reason-result-external.html # Unit 2 场景: 客户/供应商
+│   │   ├── reason-result-external.html # Unit 2 场景: 客户/供应商
+│   │   ├── changes-support.html       # Unit 3: Changes (Support 版)
+│   │   ├── changes-postmortem.html    # Unit 3 场景: 事故报告书面版
+│   │   ├── changes-pm.html            # Unit 3 场景: PM 项目管理
+│   │   ├── changes-agile.html         # Unit 3 场景: 敏捷会议
+│   │   └── changes-external.html      # Unit 3 场景: 客户/供应商
 │   ├── exercises/                     # 练习页面
-│   │   └── reason-result-exercises.html
+│   │   ├── reason-result-exercises.html
+│   │   └── changes-exercises.html
 │   ├── tests/                         # 测试页面
-│   │   └── reason-result-test.html
+│   │   ├── reason-result-test.html
+│   │   └── changes-test.html
 │   └── assets/
 │       └── css/
 │           └── style.css              # 样式表
@@ -53,7 +60,14 @@ ielts-vocabulary-learning/
     ├── Reason_Result_敏捷会议_定制版.md
     ├── Reason_Result_客户供应商沟通_定制版.md
     ├── Reason_Result_练习集.md
-    └── Reason_Result_严格测试.md
+    ├── Reason_Result_严格测试.md
+    ├── Changes_ApplicationSupport_定制版.md
+    ├── Changes_事故报告_书面版.md
+    ├── Changes_PM场景_定制版.md
+    ├── Changes_敏捷会议_定制版.md
+    ├── Changes_客户供应商沟通_定制版.md
+    ├── Changes_练习集.md
+    └── Changes_严格测试.md
 ```
 
 ### 💡 为什么有两个版本？
@@ -93,6 +107,20 @@ ielts-vocabulary-learning/
 
 **核心词汇：** due to, owing to, on the grounds that, in order to, with the aim of, as a result, as a consequence, ensued, affect, motive 等 15 词
 
+### 第三章：Changes（5 大业务场景定制）
+描述"变化与趋势"的词汇 —— 同一套约 40 个核心词，5 个场景定制版，适用于雅思写作 Task 1（图表题）、状态汇报、RCA、进度趋势沟通：
+
+| 场景 | 页面 | 适用 |
+|------|------|------|
+| 💬 Application Support | `chapters/changes-support.html` | 故障指标趋势、系统迁移、工具切换（口语/会议） |
+| 📄 事故报告书面版 | `chapters/changes-postmortem.html` | RCA 时间线、指标演变、修复前后对比（书面） |
+| 📋 PM 项目管理 | `chapters/changes-pm.html` | 进度偏差趋势、范围/资源调整、风险等级演变 |
+| 🏃 敏捷会议 | `chapters/changes-agile.html` | Sprint 速率、燃尽图趋势、流程改进（Standup/Review/Retro） |
+| 🤝 客户/供应商 | `chapters/changes-external.html` | SLA 指标变化通知、交付范围调整、期望管理（对外正式） |
+
+**核心词汇（Changes 1 趋势）：** increase, rise, go up, peak at, reach a peak of, decrease, decline, drop, fall, go down, fluctuate, remain constant, remain steady, dramatically, sharply, steadily, gradually, slightly, upward/downward trend
+**核心词汇（Changes 2 状态变化动词）：** adjust, alter, deteriorate, exchange, fade, reduce, renovate, swell, switch, vary, adapt, cut, decline, disappear, expand, improve, promote, relax, replace, transform
+
 ---
 
 ## 🛠️ 技术栈
@@ -112,4 +140,5 @@ ielts-vocabulary-learning/
 
 **项目创建：** 2026-03-19  
 **HTML 版本：** 2026-05-09  
-**在线部署：** 2026-09-12
+**在线部署：** 2026-09-12  
+**Chapter 3 (Changes) 上线：** 2026-09-14

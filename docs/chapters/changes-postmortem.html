@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changes — 事故报告书面版（Postmortem / RCA）</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📐 Changes</h1>
+      <p>事故报告书面版（Postmortem / RCA）</p>
+      <p style="font-size: 0.95rem;">基于《Check Your English Vocabulary for IELTS》第12-17页 · 适用：Incident Report / Root Cause Analysis 书面写作</p>
+    </div>
+
+    <!-- Back to Home -->
+    <nav class="nav">
+      <a href="../index.html">← 返回首页</a>
+      <a href="changes-support.html">Application Support 版</a>
+    </nav>
+
+    <div class="content">
+      <!-- Framework -->
+      <div class="chapter-card">
+        <h2>📌 核心词汇框架</h2>
+        <h3>词类分类</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词类</th>
+              <th>含义</th>
+              <th>Postmortem 书面应用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>指标趋势描述</strong></td>
+              <td>描述"变化方向 / 幅度 / 态势"</td>
+              <td>incident 期间错误率、延迟、流量、MTTR、SLO 的量化趋势（上升、下降、波动、峰值）</td>
+            </tr>
+            <tr>
+              <td><strong>系统状态演变</strong></td>
+              <td>描述"状态 / 性质如何变化"</td>
+              <td>根因演变、修复前后对比、架构替换、配置调整、服务恶化与恢复</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Category 1: Changes 1 - Metric Trends -->
+      <div class="chapter-card">
+        <h2>📈 指标趋势描述词汇 — Incident 指标变化（Changes 1）</h2>
+        <h3>上升（Upward）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>increase</code></td>
+              <td>v. 上升</td>
+              <td>The error rate <code>increased</code> from 2% to 9% during the incident.<br>事故期间错误率从 2% 上升到 9%。</td>
+            </tr>
+            <tr>
+              <td><code>rise</code></td>
+              <td>v. 上升</td>
+              <td>P99 latency <code>rose</code> steadily throughout the degraded window.<br>P99 延迟在整个劣化窗口期内稳步上升。</td>
+            </tr>
+            <tr>
+              <td><code>go up</code></td>
+              <td>v. 上升（书面亦可用）</td>
+              <td>Error volume <code>went up</code> sharply after the bad rollout.<br>坏发布后错误量急剧上升。</td>
+            </tr>
+            <tr>
+              <td><code>peak at</code></td>
+              <td>短语，达到峰值</td>
+              <td>Error rate <code>peaked at</code> 12% during the incident window.<br>事故窗口期内错误率峰值达 12%。</td>
+            </tr>
+            <tr>
+              <td><code>reach a peak of</code></td>
+              <td>短语，达到…的峰值</td>
+              <td>Traffic <code>reached a peak of</code> 50k requests per second at 14:00.<br>流量在 14:00 达到每秒 5 万请求的峰值。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>下降（Downward）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>decrease</code></td>
+              <td>v. 下降</td>
+              <td>After rollback, the error rate <code>decreased</code> to baseline.<br>回滚后错误率下降至基线水平。</td>
+            </tr>
+            <tr>
+              <td><code>decline</code></td>
+              <td>v. 下降</td>
+              <td>Service availability <code>declined</code> to 99.2% during the outage.<br>中断期间服务可用性下降至 99.2%。</td>
+            </tr>
+            <tr>
+              <td><code>drop</code></td>
+              <td>v. 骤降</td>
+              <td>Throughput <code>dropped</code> by 40% when the cache failed.<br>缓存失效时吞吐量骤降 40%。</td>
+            </tr>
+            <tr>
+              <td><code>fall</code></td>
+              <td>v. 下降</td>
+              <td>The success rate <code>fell</code> below the SLO threshold.<br>成功率跌破了 SLO 阈值。</td>
+            </tr>
+            <tr>
+              <td><code>go down</code></td>
+              <td>v. 下降</td>
+              <td>Latency <code>went down</code> once the extra replicas were added.<br>增加副本后延迟下降。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>波动与持平（Fluctuation & Stability）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>fluctuate</code></td>
+              <td>v. 波动</td>
+              <td>Queue depth <code>fluctuated</code> between 1k and 8k during the spike.<br>峰值期间队列深度在 1 千到 8 千之间波动。</td>
+            </tr>
+            <tr>
+              <td><code>remain constant</code></td>
+              <td>短语，保持恒定</td>
+              <td>The CPU usage <code>remained constant</code> throughout the incident.<br>整个事故期间 CPU 使用率保持恒定。</td>
+            </tr>
+            <tr>
+              <td><code>remain steady</code></td>
+              <td>短语，保持平稳</td>
+              <td>The recovery progress <code>remained steady</code> after the fix.<br>修复后恢复进度保持平稳。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>程度副词（Degree Adverbs）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>dramatically</code></td>
+              <td>adv. 剧烈地</td>
+              <td>The error rate rose <code>dramatically</code> after the config push.<br>配置推送后错误率剧烈上升。</td>
+            </tr>
+            <tr>
+              <td><code>sharply</code></td>
+              <td>adv. 急剧地</td>
+              <td>Latency dropped <code>sharply</code> once we disabled the feature flag.<br>关闭功能开关后延迟急剧下降。</td>
+            </tr>
+            <tr>
+              <td><code>steadily</code></td>
+              <td>adv. 稳定地</td>
+              <td>The backlog cleared <code>steadily</code> over the next hour.<br>接下来一小时积压稳定地清空。</td>
+            </tr>
+            <tr>
+              <td><code>gradually</code></td>
+              <td>adv. 逐渐地</td>
+              <td>The system <code>gradually</code> recovered after the restart.<br>重启后系统逐渐恢复。</td>
+            </tr>
+            <tr>
+              <td><code>slightly</code></td>
+              <td>adv. 略微地</td>
+              <td>Availability improved <code>slightly</code> after the first mitigation.<br>第一次缓解后可用性略微改善。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>趋势名词（Trend Nouns）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>upward trend</code></td>
+              <td>n. 上升趋势</td>
+              <td>There was an <code>upward trend</code> in latency before the alert fired.<br>告警触发前延迟呈上升趋势。</td>
+            </tr>
+            <tr>
+              <td><code>downward trend</code></td>
+              <td>n. 下降趋势</td>
+              <td>A <code>downward trend</code> in error rate confirmed the fix worked.<br>错误率的下降趋势证实了修复有效。</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 Postmortem 提示：</strong> 趋势词用于量化 incident 指标，是 RCA 时间线与 status 图表说明的标准用语。</p>
+          <p>Error rate <code>peaked at</code> 12% and then <code>decreased</code> to baseline within 20 minutes of the rollback.<br>（错误率峰值达 12%，并在回滚后 20 分钟内下降至基线。）</p>
+          <p>Throughout the degraded window, P99 latency showed a clear <code>upward trend</code> before it <code>dropped sharply</code> post-mitigation.<br>（在整个劣化窗口期内，P99 延迟在缓解措施后急剧下降之前呈现出明显的上升趋势。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Category 2: Changes 2 - State Change Verbs -->
+      <div class="chapter-card">
+        <h2>🔧 系统状态演变动词 — 根因与修复（Changes 2）</h2>
+        <h3>Group 1</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>adjust</code></td>
+              <td>v. 调整 / 适应</td>
+              <td>We <code>adjusted</code> the timeout to reduce retries.<br>我们调整了超时设置以减少重试。</td>
+            </tr>
+            <tr>
+              <td><code>alter</code></td>
+              <td>v. 改变</td>
+              <td>The patch <code>altered</code> the retry logic in the client.<br>该补丁改变了客户端的重试逻辑。</td>
+            </tr>
+            <tr>
+              <td><code>deteriorate</code></td>
+              <td>v. 恶化</td>
+              <td>Service stability <code>deteriorated</code> after the bad deploy.<br>坏部署后服务稳定性恶化。</td>
+            </tr>
+            <tr>
+              <td><code>exchange</code></td>
+              <td>v. 交换 / 更换</td>
+              <td>We <code>exchanged</code> the faulty node for a healthy one.<br>我们将故障节点更换为正常节点。</td>
+            </tr>
+            <tr>
+              <td><code>fade</code></td>
+              <td>v. 逐渐消失 / 消退</td>
+              <td>The alert storm <code>faded</code> once the loop was broken.<br>打破循环后告警风暴逐渐消退。</td>
+            </tr>
+            <tr>
+              <td><code>reduce</code></td>
+              <td>v. 减少</td>
+              <td>The fix <code>reduced</code> MTTR from 45 to 12 minutes.<br>该修复将 MTTR 从 45 分钟减少到 12 分钟。</td>
+            </tr>
+            <tr>
+              <td><code>renovate</code></td>
+              <td>v. 翻新 / 更新</td>
+              <td>We <code>renovated</code> the runbook to reflect the new architecture.<br>我们翻新了 runbook 以反映新架构。</td>
+            </tr>
+            <tr>
+              <td><code>swell</code></td>
+              <td>v. 膨胀 / 增大</td>
+              <td>The incident channel <code>swelled</code> with messages during the outage.<br>中断期间事件频道消息量骤增。</td>
+            </tr>
+            <tr>
+              <td><code>switch</code></td>
+              <td>v. 切换</td>
+              <td>We <code>switched</code> the traffic to the standby region.<br>我们将流量切换到备用区域。</td>
+            </tr>
+            <tr>
+              <td><code>switch to</code></td>
+              <td>短语，转换到</td>
+              <td>We <code>switched to</code> the degraded mode to protect the core path.<br>我们切换到降级模式以保护核心路径。</td>
+            </tr>
+            <tr>
+              <td><code>vary</code></td>
+              <td>v. 变化 / 不同</td>
+              <td>Impact <code>varied</code> by customer segment and region.<br>影响因客户群和区域而不同。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Group 2</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>adapt</code></td>
+              <td>v. 适应 / 改编</td>
+              <td>The on-call <code>adapted</code> the runbook to the new topology.<br>值班团队将 runbook 改编适配了新拓扑。</td>
+            </tr>
+            <tr>
+              <td><code>cut</code></td>
+              <td>v. 削减</td>
+              <td>We <code>cut</code> the rollout to 5% to limit the blast radius.<br>我们将发布比例削减至 5% 以限制爆炸半径。</td>
+            </tr>
+            <tr>
+              <td><code>decline</code></td>
+              <td>v. 下降 / 减少</td>
+              <td>The failure rate <code>declined</code> after the hotfix.<br>热修复后故障率下降。</td>
+            </tr>
+            <tr>
+              <td><code>disappear</code></td>
+              <td>v. 消失</td>
+              <td>The intermittent errors <code>disappeared</code> after the restart.<br>重启后间歇性错误消失。</td>
+            </tr>
+            <tr>
+              <td><code>expand</code></td>
+              <td>v. 扩张 / 扩容</td>
+              <td>We <code>expanded</code> capacity to absorb the traffic surge.<br>我们扩容以吸收流量激增。</td>
+            </tr>
+            <tr>
+              <td><code>improve</code></td>
+              <td>v. 改善</td>
+              <td>Service stability <code>improved</code> once we rolled back.<br>回滚后服务稳定性改善。</td>
+            </tr>
+            <tr>
+              <td><code>promote</code></td>
+              <td>v. 提升 / 晋升（此处：提升发布）</td>
+              <td>We <code>promoted</code> the fix from canary to full rollout.<br>我们将修复从金丝雀提升为全量发布。</td>
+            </tr>
+            <tr>
+              <td><code>relax</code></td>
+              <td>v. 放松 / 放宽</td>
+              <td>We <code>relaxed</code> the circuit breaker threshold post-incident.<br>事故后我们放宽了熔断阈值。</td>
+            </tr>
+            <tr>
+              <td><code>replace</code></td>
+              <td>v. 替换</td>
+              <td>We <code>replaced</code> the corrupt cache with a fresh instance.<br>我们用全新实例替换了损坏的缓存。</td>
+            </tr>
+            <tr>
+              <td><code>transform</code></td>
+              <td>v. 彻底转型 / 改变</td>
+              <td>The remediation <code>transformed</code> the fragile pipeline into a resilient one.<br>该修复将脆弱的流水线彻底转变为有韧性的流水线。</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 Postmortem 提示：</strong> 状态动词用于描述根因如何演变、修复如何改变系统，是 "Timeline" 与 "Remediation" 段的核心动词。</p>
+          <p>Service stability <code>deteriorated</code> after the bad deploy, then <code>improved</code> once we rolled back and <code>replaced</code> the faulty component.<br>（坏部署后服务稳定性恶化，在我们回滚并替换故障组件后得以改善。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 1: RCA Timeline -->
+      <div class="chapter-card">
+        <h2>🎯 场景一：RCA 时间线描述（Incident Timeline）</h2>
+        <p><strong>流程：</strong> Detection → Impact → Mitigation → Resolution</p>
+        <table>
+          <thead>
+            <tr>
+              <th>阶段</th>
+              <th>指标变化（趋势词）</th>
+              <th>根因演变（状态动词）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Detection</strong></td>
+              <td>Error rate <code>rose</code> sharply and <code>peaked at</code> 12%.</td>
+              <td>Root cause <code>altered</code> from config drift to bad rollout.</td>
+            </tr>
+            <tr>
+              <td><strong>Impact</strong></td>
+              <td>Availability <code>declined</code> to 99.1%; latency <code>went up</code>.</td>
+              <td>Blast radius <code>expanded</code> across regions.</td>
+            </tr>
+            <tr>
+              <td><strong>Mitigation</strong></td>
+              <td>Error rate <code>decreased</code> after rollback.</td>
+              <td>We <code>switched</code> traffic to the standby region and <code>adjusted</code> the breaker.</td>
+            </tr>
+            <tr>
+              <td><strong>Resolution</strong></td>
+              <td>Metrics <code>remained steady</code>; a <code>downward trend</code> confirmed.</td>
+              <td>Root cause <code>replaced</code> by a stable configuration.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例（正式 Postmortem 摘要）：</strong> During the Detection phase, the error rate <code>rose</code> sharply and <code>peaked at</code> 12% within ten minutes of the bad rollout, while the root cause <code>altered</code> from suspected config drift to a faulty deployment. In the Impact phase, availability <code>declined</code> to 99.1% and P99 latency <code>went up</code> by 300 ms as the blast radius <code>expanded</code> across two regions. For Mitigation, we <code>switched</code> user traffic to the standby region and <code>adjusted</code> the circuit breaker threshold, after which the error rate <code>decreased</code> to baseline. By Resolution, all metrics <code>remained steady</code> and a clear <code>downward trend</code> in incidents confirmed the root cause had been <code>replaced</code> by a stable configuration.</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 2: Before / After -->
+      <div class="chapter-card">
+        <h2>🎯 场景二：修复前后对比（Before / After）</h2>
+        <p><strong>流程：</strong> Faulty state → Remediation → Improved state</p>
+        <table>
+          <thead>
+            <tr>
+              <th>维度</th>
+              <th>修复前（Before）</th>
+              <th>修复后（After）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>架构</strong></td>
+              <td>Monolith with a single cache tier</td>
+              <td>Cache tier <code>replaced</code> with a replicated cluster</td>
+            </tr>
+            <tr>
+              <td><strong>流水线</strong></td>
+              <td>Fragile, single-region deploy</td>
+              <td>Pipeline <code>transformed</code> into a resilient, multi-region one</td>
+            </tr>
+            <tr>
+              <td><strong>MTTR</strong></td>
+              <td>45 minutes</td>
+              <td>MTTR <code>reduced</code> to 12 minutes</td>
+            </tr>
+            <tr>
+              <td><strong>稳定性</strong></td>
+              <td>Stability <code>deteriorated</code> under load</td>
+              <td>Stability <code>improved</code> and remained steady</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> Before remediation, the platform relied on a monolith with a single cache tier, and stability <code>deteriorated</code> under peak load. The remediation <code>replaced</code> the single cache tier with a replicated cluster and <code>transformed</code> the fragile deploy pipeline into a resilient, multi-region one. As a result, MTTR was <code>reduced</code> from 45 to 12 minutes, and service stability <code>improved</code> while remaining steady across subsequent load tests. The fragile topology was therefore <code>transformed</code> into a self-healing architecture.</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 1 -->
+      <div class="chapter-card">
+        <h2>💬 对话一：Postmortem 评审会 — SRE 向管理层口头汇报指标演变</h2>
+        <blockquote>
+          <p><strong>SRE:</strong> Thanks for the time. I'll walk through how the key metrics evolved during last night's incident.<br>（谢谢抽空。我来说明昨晚事故期间关键指标是如何演变的。）</p>
+          <p><strong>Manager:</strong> Go ahead. What did the error rate do?<br>（请讲。错误率是什么走势？）</p>
+          <p><strong>SRE:</strong> The error rate <code>peaked at</code> about 12% around 02:10, roughly twenty minutes after the bad rollout.<br>（错误率在 02:10 左右达到约 12% 的峰值，也就是坏发布后约二十分钟。）</p>
+          <p><strong>Manager:</strong> And during the window, was it stable at all?<br>（那在窗口期内，它有过稳定吗？）</p>
+          <p><strong>SRE:</strong> Between mitigations, the rate <code>remained steady</code> at around 4% while we investigated the root cause.<br>（在两次缓解之间，错误率在我们排查根因时保持在约 4% 的平稳状态。）</p>
+          <p><strong>Manager:</strong> How bad did it get before we acted?<br>（在我们采取行动前，情况有多糟？）</p>
+          <p><strong>SRE:</strong> Before rollback, service stability <code>deteriorated</code> sharply and availability dropped below our SLO.<br>（回滚前，服务稳定性急剧恶化，可用性跌破了我们的 SLO。）</p>
+          <p><strong>Manager:</strong> And now?<br>（那现在呢？）</p>
+          <p><strong>SRE:</strong> Once we rolled back and switched traffic, the system <code>recovered</code> and the error rate fell back to baseline within half an hour.<br>（一旦我们回滚并切换流量，系统就恢复了，错误率在半小时内回落到基线。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 2 -->
+      <div class="chapter-card">
+        <h2>💬 对话二：跨部门书面报告评审（Written Review）</h2>
+        <blockquote>
+          <p><strong>Reviewer:</strong> I've read the draft RCA. Can you clarify the remediation section?<br>（我读了 RCA 草稿。能说明一下修复这一段吗？）</p>
+          <p><strong>Author:</strong> Certainly. We first <code>switched</code> the serving path from the legacy gateway to the new proxy.<br>（当然。我们首先把服务路径从旧网关切换到了新代理。）</p>
+          <p><strong>Reviewer:</strong> And the corrupt cache?<br>（那损坏的缓存呢？）</p>
+          <p><strong>Author:</strong> We <code>replaced</code> the corrupt cache with a fresh, replicated instance to stop the data loss.<br>（我们用全新的、带复制的实例替换了损坏的缓存，以阻止数据丢失。）</p>
+          <p><strong>Reviewer:</strong> Did the runbook help, or did you change it?<br>（runbook 帮上忙了吗，还是你们改了它？）</p>
+          <p><strong>Author:</strong> We <code>adapted</code> the runbook to the new topology so on-call could follow it next time.<br>（我们把 runbook 改编适配了新拓扑，这样下次值班团队就能照着执行。）</p>
+          <p><strong>Reviewer:</strong> Good. And the bigger picture?<br>（很好。那更宏观的层面呢？）</p>
+          <p><strong>Author:</strong> The remediation <code>transformed</code> our fragile single-region setup into a resilient, multi-region platform.<br>（这次修复把我们脆弱的单区域架构彻底转型成了有韧性的多区域平台。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Quick Reference -->
+      <div class="chapter-card">
+        <h2>📊 Postmortem 速查表</h2>
+        <h3>指标趋势（Metrics）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>正式书面表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>错误率飙升到顶点</strong></td>
+              <td>The error rate rose sharply and peaked at 12% during the incident window.</td>
+            </tr>
+            <tr>
+              <td><strong>延迟持续上升</strong></td>
+              <td>P99 latency showed an upward trend and rose steadily before mitigation.</td>
+            </tr>
+            <tr>
+              <td><strong>可用性下降</strong></td>
+              <td>Availability declined to 99.1%, falling below the SLO threshold.</td>
+            </tr>
+            <tr>
+              <td><strong>回滚后指标恢复</strong></td>
+              <td>After rollback, the error rate decreased to baseline and remained steady.</td>
+            </tr>
+            <tr>
+              <td><strong>流量激增</strong></td>
+              <td>Inbound traffic went up and reached a peak of 50k RPS at 14:00.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>状态演变（State Changes）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>正式书面表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>稳定性恶化</strong></td>
+              <td>Service stability deteriorated after the bad deploy, then improved after rollback.</td>
+            </tr>
+            <tr>
+              <td><strong>替换故障组件</strong></td>
+              <td>We replaced the corrupt cache with a fresh, replicated instance.</td>
+            </tr>
+            <tr>
+              <td><strong>架构彻底转型</strong></td>
+              <td>The remediation transformed the fragile pipeline into a resilient one.</td>
+            </tr>
+            <tr>
+              <td><strong>削减发布范围</strong></td>
+              <td>We cut the rollout to 5% to limit the blast radius during remediation.</td>
+            </tr>
+            <tr>
+              <td><strong>缩短恢复时间</strong></td>
+              <td>The fix reduced MTTR from 45 to 12 minutes and expanded capacity for surges.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Practice -->
+      <div class="chapter-card">
+        <h2>🚀 实战练习（Postmortem 语境）</h2>
+        <h3>练习一：趋势词填空</h3>
+        <blockquote>
+          <p><strong>Timeline:</strong> The error rate __________ sharply right after the bad rollout and __________ at 12% within ten minutes. After we rolled back, it __________ to baseline and then __________ steady for the rest of the window. A clear __________ in incidents confirmed the fix.</p>
+        </blockquote>
+        <h3>练习二：状态动词填空</h3>
+        <blockquote>
+          <p><strong>Remediation:</strong> Service stability __________ after the faulty deploy, so we __________ the corrupt cache with a fresh instance and __________ traffic to the standby region. These steps __________ our fragile setup and __________ MTTR from 45 to 12 minutes.</p>
+        </blockquote>
+        <h3>练习三：场景写作</h3>
+        <blockquote>
+          <p><strong>任务：</strong> 用至少 4 个趋势词（如 peaked at / decreased / remained steady / upward trend）和 3 个状态动词（如 deteriorated / replaced / transformed），写一段 3–4 句的正式 Postmortem 摘要。</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>📚 IELTS Vocabulary Learning Project</p>
+      <p style="margin-top: 10px; opacity: 0.8;">Customized for Incident Postmortem / RCA Scenarios</p>
+      <p style="margin-top: 10px; opacity: 0.8;">适配角色：Application Support / SRE（书面报告写作）</p>
+    </div>
+  </div>
+</body>
+</html>

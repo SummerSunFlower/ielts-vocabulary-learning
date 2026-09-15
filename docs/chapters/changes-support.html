@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changes — Application Support 场景</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📐 Changes</h1>
+      <p>Application Support 定制版</p>
+      <p style="font-size: 0.95rem;">基于《Check Your English Vocabulary for IELTS》第12-17页 · 适用角色：Application Support Engineer</p>
+    </div>
+
+    <!-- Back to Home -->
+    <nav class="nav">
+      <a href="../index.html">← 返回首页</a>
+    </nav>
+
+    <div class="content">
+      <!-- Framework -->
+      <div class="chapter-card">
+        <h2>📌 核心词汇框架</h2>
+        <h3>词类分类</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词类</th>
+              <th>含义</th>
+              <th>Support 场景应用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>趋势描述类</strong></td>
+              <td>描述数字、指标、数据随时间的变化方向</td>
+              <td>故障指标汇报、容量趋势、工单量/延迟/错误率走势</td>
+            </tr>
+            <tr>
+              <td><strong>状态变化类</strong></td>
+              <td>描述系统、服务、流程的状态或性质的改变</td>
+              <td>系统迁移、服务状态切换、工具替换、事件复盘</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Category 1: Trends (Changes 1) -->
+      <div class="chapter-card">
+        <h2>📈 趋势描述类词汇（Changes 1）</h2>
+        <h3>上升 / 下降 / 波动</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>increase</code></td>
+              <td>v. 上升</td>
+              <td>The error rate <code>increased</code> after the deploy.<br>（部署后错误率上升了。）</td>
+            </tr>
+            <tr>
+              <td><code>rise</code></td>
+              <td>v. 上升</td>
+              <td>Latency <code>rose</code> from 200ms to 800ms during peak hours.<br>（高峰时段延迟从 200ms 升到 800ms。）</td>
+            </tr>
+            <tr>
+              <td><code>go up</code></td>
+              <td>v. 上升（口语）</td>
+              <td>Ticket volume <code>went up</code> by 40% this week.<br>（本周工单量上升了 40%。）</td>
+            </tr>
+            <tr>
+              <td><code>peak at</code></td>
+              <td>v. 达到峰值</td>
+              <td>CPU usage <code>peaked at</code> 95% at 14:00.<br>（CPU 使用率在 14:00 达到峰值 95%。）</td>
+            </tr>
+            <tr>
+              <td><code>reach a peak of</code></td>
+              <td>v. 达到…的峰值</td>
+              <td>The queue length <code>reached a peak of</code> 12,000 messages.<br>（队列长度达到峰值 12,000 条消息。）</td>
+            </tr>
+            <tr>
+              <td><code>decrease</code></td>
+              <td>v. 下降</td>
+              <td>Memory consumption <code>decreased</code> after the patch.<br>（打补丁后内存消耗下降了。）</td>
+            </tr>
+            <tr>
+              <td><code>decline</code></td>
+              <td>v. 下降</td>
+              <td>The success rate <code>declined</code> over the weekend.<br>（成功率在周末下降了。）</td>
+            </tr>
+            <tr>
+              <td><code>drop</code></td>
+              <td>v. 下降（骤降）</td>
+              <td>Throughput <code>dropped</code> to 50 requests per second.<br>（吞吐量骤降到每秒 50 个请求。）</td>
+            </tr>
+            <tr>
+              <td><code>fall</code></td>
+              <td>v. 下降</td>
+              <td>Availability <code>fell</code> below the 99.9% SLA target.<br>（可用性跌破了 99.9% 的 SLA 目标。）</td>
+            </tr>
+            <tr>
+              <td><code>go down</code></td>
+              <td>v. 下降（口语）</td>
+              <td>The false-positive alerts <code>went down</code> after tuning.<br>（误报在调优后减少了。）</td>
+            </tr>
+            <tr>
+              <td><code>fluctuate</code></td>
+              <td>v. 波动</td>
+              <td>Response time <code>fluctuated</code> between 300ms and 1.2s.<br>（响应时间在 300ms 到 1.2 秒之间波动。）</td>
+            </tr>
+            <tr>
+              <td><code>remain constant</code></td>
+              <td>v. 保持恒定</td>
+              <td>Disk I/O <code>remained constant</code> throughout the incident.<br>（整个故障期间磁盘 I/O 保持恒定。）</td>
+            </tr>
+            <tr>
+              <td><code>remain steady</code></td>
+              <td>v. 保持平稳</td>
+              <td>The throughput <code>remained steady</code> at 2,000 rps.<br>（吞吐量保持在 2000 rps 平稳。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>程度副词（修饰变化幅度）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>dramatically</code></td>
+              <td>adv. 急剧地</td>
+              <td>Errors rose <code>dramatically</code> after the bad release.<br>（糟糕的发布后错误急剧上升。）</td>
+            </tr>
+            <tr>
+              <td><code>sharply</code></td>
+              <td>adv. 急剧地</td>
+              <td>Latency dropped <code>sharply</code> once we scaled out.<br>（扩容后延迟急剧下降。）</td>
+            </tr>
+            <tr>
+              <td><code>steadily</code></td>
+              <td>adv. 稳定地</td>
+              <td>The backlog cleared <code>steadily</code> after the fix.<br>（修复后积压稳定地清空。）</td>
+            </tr>
+            <tr>
+              <td><code>gradually</code></td>
+              <td>adv. 逐渐地</td>
+              <td>Performance improved <code>gradually</code> as the cache warmed up.<br>（随着缓存预热，性能逐渐改善。）</td>
+            </tr>
+            <tr>
+              <td><code>slightly</code></td>
+              <td>adv. 略微</td>
+              <td>CPU dipped <code>slightly</code> after the config change.<br>（配置变更后 CPU 略微下降。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>趋势名词</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>upward trend</code></td>
+              <td>n. 上升趋势</td>
+              <td>There is an <code>upward trend</code> in ticket volume.<br>（工单量呈上升趋势。）</td>
+            </tr>
+            <tr>
+              <td><code>downward trend</code></td>
+              <td>n. 下降趋势</td>
+              <td>We see a <code>downward trend</code> in MTTR this quarter.<br>（本季度 MTTR 呈下降趋势。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 Support 场景提示：</strong> 这些词在 incident report、postmortem 和容量周报里高频出现，用于客观描述指标走向，避免主观措辞。</p>
+          <p>The error rate <code>increased</code> <code>dramatically</code> after the deploy, then <code>peaked at</code> 8% before the rollback brought it back down.<br>（部署后错误率急剧上升，在回滚把它降下来之前达到峰值 8%。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Category 2: State Change Verbs (Changes 2) -->
+      <div class="chapter-card">
+        <h2>🔧 状态变化类动词（Changes 2）</h2>
+        <h3>Group 1</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>adjust</code></td>
+              <td>v. 调整 / 适应</td>
+              <td>We <code>adjusted</code> the timeout to 30 seconds.<br>（我们把超时调整为 30 秒。）</td>
+            </tr>
+            <tr>
+              <td><code>alter</code></td>
+              <td>v. 改变</td>
+              <td>The deploy <code>altered</code> the routing rules.<br>（部署改变了路由规则。）</td>
+            </tr>
+            <tr>
+              <td><code>deteriorate</code></td>
+              <td>v. 恶化</td>
+              <td>Service health <code>deteriorated</code> after the traffic spike.<br>（流量激增后服务健康度恶化。）</td>
+            </tr>
+            <tr>
+              <td><code>exchange</code></td>
+              <td>v. 交换</td>
+              <td>We <code>exchanged</code> the faulty node for a healthy one.<br>（我们用健康节点替换了故障节点。）</td>
+            </tr>
+            <tr>
+              <td><code>fade</code></td>
+              <td>v. 逐渐消失 / 褪色</td>
+              <td>The cached session <code>faded</code> after the TTL expired.<br>（缓存会话在 TTL 到期后逐渐消失。）</td>
+            </tr>
+            <tr>
+              <td><code>reduce</code></td>
+              <td>v. 减少</td>
+              <td>We <code>reduced</code> the retry count to cut load.<br>（我们减少了重试次数以降低负载。）</td>
+            </tr>
+            <tr>
+              <td><code>renovate</code></td>
+              <td>v. 翻新</td>
+              <td>The team <code>renovated</code> the legacy logging pipeline.<br>（团队翻新了旧的日志管道。）</td>
+            </tr>
+            <tr>
+              <td><code>swell</code></td>
+              <td>v. 膨胀 / 增大</td>
+              <td>The error log <code>swelled</code> to 2 GB overnight.<br>（错误日志一夜之间膨胀到 2 GB。）</td>
+            </tr>
+            <tr>
+              <td><code>switch</code></td>
+              <td>v. 转换（switch to）</td>
+              <td>We <code>switched</code> to the standby database.<br>（我们切换到了备用数据库。）</td>
+            </tr>
+            <tr>
+              <td><code>vary</code></td>
+              <td>v. 变化 / 不同</td>
+              <td>Response times <code>vary</code> by region.<br>（响应时间因地区而异。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Group 2</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>adapt</code></td>
+              <td>v. 适应 / 改编</td>
+              <td>The runbook was <code>adapted</code> for the new stack.<br>（操作手册为新架构做了改编。）</td>
+            </tr>
+            <tr>
+              <td><code>cut</code></td>
+              <td>v. 削减</td>
+              <td>We <code>cut</code> the batch size to relieve pressure.<br>（我们削减了批处理大小以缓解压力。）</td>
+            </tr>
+            <tr>
+              <td><code>decline</code></td>
+              <td>v. 下降 / 拒绝</td>
+              <td>The vendor <code>declined</code> the rollback request.<br>（供应商拒绝了回滚请求。）</td>
+            </tr>
+            <tr>
+              <td><code>disappear</code></td>
+              <td>v. 消失</td>
+              <td>The intermittent timeout <code>disappeared</code> after the fix.<br>（间歇性超时在修复后消失了。）</td>
+            </tr>
+            <tr>
+              <td><code>expand</code></td>
+              <td>v. 扩张</td>
+              <td>We <code>expanded</code> capacity ahead of the campaign.<br>（活动前我们扩张了容量。）</td>
+            </tr>
+            <tr>
+              <td><code>improve</code></td>
+              <td>v. 改善</td>
+              <td>Observability <code>improved</code> after adding tracing.<br>（增加追踪后，可观测性改善了。）</td>
+            </tr>
+            <tr>
+              <td><code>promote</code></td>
+              <td>v. 提升 / 晋升</td>
+              <td>She was <code>promoted</code> to on-call lead.<br>（她被晋升为值班负责人。）</td>
+            </tr>
+            <tr>
+              <td><code>relax</code></td>
+              <td>v. 放松</td>
+              <td>We <code>relaxed</code> the rate limit during maintenance.<br>（维护期间我们放宽了限流。）</td>
+            </tr>
+            <tr>
+              <td><code>replace</code></td>
+              <td>v. 替换</td>
+              <td>The legacy system was <code>replaced</code> by microservices.<br>（旧系统被微服务架构取代了。）</td>
+            </tr>
+            <tr>
+              <td><code>transform</code></td>
+              <td>v. 彻底转型 / 改变</td>
+              <td>The incident process was <code>transformed</code> by automation.<br>（事件流程被自动化彻底改变了。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 Support 场景提示：</strong> 这组动词用于迁移通知、状态变更、事件复盘，描述"系统从 A 状态变成 B 状态"。</p>
+          <p>The legacy platform was <code>replaced</code> by the new microservices architecture, and the on-call burden <code>improved</code> <code>gradually</code> over the next two sprints.<br>（旧平台被新微服务架构取代，随后两个迭代里值班负担逐渐改善。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 1: Metric Reporting -->
+      <div class="chapter-card">
+        <h2>🎯 场景一：故障指标汇报（Metric Reporting）</h2>
+        <p><strong>流程：</strong> 现状 → 趋势描述 → 根因 → 影响 → 修复后对比</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步骤</th>
+              <th>模板</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>现状</strong></td>
+              <td>Current status: X is showing...</td>
+              <td>Current status: the checkout API is showing elevated error rates.</td>
+            </tr>
+            <tr>
+              <td><strong>趋势描述</strong></td>
+              <td>The error rate increased / dropped...</td>
+              <td>The error rate <code>increased</code> <code>dramatically</code> and <code>peaked at</code> 9%.</td>
+            </tr>
+            <tr>
+              <td><strong>根因</strong></td>
+              <td>Root cause: X altered / deteriorated...</td>
+              <td>Root cause: a config change <code>altered</code> the connection pool size.</td>
+            </tr>
+            <tr>
+              <td><strong>影响</strong></td>
+              <td>This affected Y, ticket volume went up...</td>
+              <td>This <code>affected</code> checkout, and ticket volume <code>went up</code> by 60%.</td>
+            </tr>
+            <tr>
+              <td><strong>修复后对比</strong></td>
+              <td>After the fix, X dropped sharply...</td>
+              <td>After the rollback, the error rate <code>dropped</code> <code>sharply</code> to baseline.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> Current status: the payments service is showing elevated latency. The p99 latency <code>rose</code> from 300ms to 1.4s and <code>peaked at</code> 1.4s at 13:00, then <code>fluctuated</code> for 20 minutes. Root cause: a bad deploy <code>altered</code> the caching layer and service health <code>deteriorated</code>. This <code>affected</code> the retail client's checkout, and ticket volume <code>went up</code> by 60%. After we <code>switched</code> to the previous build, latency <code>dropped</code> <code>sharply</code> and remain<code>ed steady</code> at 300ms. We <code>reduced</code> the retry count to prevent a retry storm.</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 2: Migration / Tool Switch -->
+      <div class="chapter-card">
+        <h2>🎯 场景二：系统迁移 / 工具切换通报（Migration & Tool Switch）</h2>
+        <p><strong>流程：</strong> 背景 → 变更动作 → 过渡状态 → 预期收益 → 回滚预案</p>
+        <table>
+          <thead>
+            <tr>
+              <th>步骤</th>
+              <th>模板</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>背景</strong></td>
+              <td>We are migrating X to Y...</td>
+              <td>We are migrating the alerting stack from Nagios to Prometheus.</td>
+            </tr>
+            <tr>
+              <td><strong>变更动作</strong></td>
+              <td>The legacy system was replaced by...</td>
+              <td>The legacy platform was <code>replaced</code> by the new microservices architecture.</td>
+            </tr>
+            <tr>
+              <td><strong>过渡状态</strong></td>
+              <td>We switched to / adapted the runbook...</td>
+              <td>We <code>switched</code> to the standby cluster and <code>adapted</code> the runbook.</td>
+            </tr>
+            <tr>
+              <td><strong>预期收益</strong></td>
+              <td>Observability improved / MTTR went down...</td>
+              <td>Observability <code>improved</code> and MTTR <code>went down</code> by 30%.</td>
+            </tr>
+            <tr>
+              <td><strong>回滚预案</strong></td>
+              <td>If it fails, we will exchange / revert...</td>
+              <td>If it fails, we will <code>exchange</code> the new node for the old one.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> We are migrating our monitoring from the legacy tool to a new observability suite. Over the weekend the old dashboard was <code>replaced</code> by the new one, and the on-call runbook was <code>adapted</code> for the new queries. During cutover we <code>switched</code> traffic to the standby region so the main region could be <code>renovated</code>. Capacity was <code>expanded</code> ahead of the retail client's campaign, and alert noise <code>reduced</code> after we <code>relaxed</code> two noisy rules. If the new stack misbehaves, we will <code>exchange</code> it back to the previous version within 15 minutes.</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 1 -->
+      <div class="chapter-card">
+        <h2>💬 对话一：Slack / 会议中向 Dev 通报指标异常并请求协助</h2>
+        <blockquote>
+          <p><strong>Support:</strong> Hey, I'm seeing the error rate on the checkout API <code>increase</code> <code>dramatically</code> in the last 10 minutes. Can you take a look?</p>
+          <p>（Support：嘿，我看到结账 API 的错误率在过去 10 分钟急剧上升，能帮忙看下吗？）</p>
+          <p><strong>Dev:</strong> On it. What's the number now?</p>
+          <p>（Dev：在处理。现在到多少了？）</p>
+          <p><strong>Support:</strong> It <code>peaked at</code> about 9%, and the latency also <code>rose</code> from 300ms to over a second. Service health is starting to <code>deteriorate</code>.</p>
+          <p>（Support：峰值约 9%，延迟也从 300ms 升到一秒多，服务健康度开始恶化。）</p>
+          <p><strong>Dev:</strong> Looks like the last deploy <code>altered</code> the connection pool config. I'll roll it back.</p>
+          <p>（Dev：看起来上次部署改了连接池配置，我回滚一下。）</p>
+          <p><strong>Support:</strong> Good. Meanwhile I'll <code>switch</code> to the standby database to protect the main one. Ticket volume is already <code>going up</code>.</p>
+          <p>（Support：好，同时我切到备用库保护主库，工单量已经在涨了。）</p>
+          <p><strong>Dev:</strong> Rolled back. Did the error rate <code>drop</code>?</p>
+          <p>（Dev：已回滚，错误率降了吗？）</p>
+          <p><strong>Support:</strong> Yes, it <code>dropped</code> <code>sharply</code> and is <code>remaining steady</code> now. To avoid a retry storm I <code>reduced</code> the retry count on the client side. Thanks for the quick fix.</p>
+          <p>（Support：降了，急剧下降，现在平稳。为避免重试风暴我把客户端重试次数调小了，多谢快速修复。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 2 -->
+      <div class="chapter-card">
+        <h2>💬 对话二：跨团队 incident 复盘会议（Postmortem）</h2>
+        <blockquote>
+          <p><strong>Support Lead:</strong> Let's review the payments incident. First, the p99 latency <code>peaked at</code> 1.8s and the error rate stayed high for 25 minutes.</p>
+          <p>（Support Lead：我们复盘下支付故障。首先 p99 延迟峰值到 1.8 秒，错误率高企了 25 分钟。）</p>
+          <p><strong>SRE:</strong> Right. During that window the CPU usage <code>fluctuated</code>, but the queue length <code>remained steady</code>, so it wasn't a throughput issue.</p>
+          <p>（SRE：对，那段时间 CPU 有波动，但队列长度保持平稳，所以不是吞吐问题。）</p>
+          <p><strong>Dev:</strong> The root cause was a cache bug. After the fix, latency <code>went down</code> and the success rate <code>improved</code> <code>gradually</code> over the next hour.</p>
+          <p>（Dev：根因是缓存 bug。修复后延迟下降，成功率在接下来一小时逐渐改善。）</p>
+          <p><strong>Support Lead:</strong> Good. Longer term, the legacy cache was <code>replaced</code> by a distributed one, which <code>transformed</code> our incident handling. Our MTTR <code>went down</code> by 35% this quarter, a clear <code>downward trend</code>.</p>
+          <p>（Support Lead：很好。长期看，旧缓存被分布式缓存取代，彻底改变了我们的事件处理。本季度 MTTR 下降 35%，呈明显下降趋势。）</p>
+          <p><strong>PM:</strong> And we <code>expanded</code> the on-call coverage, so the alert noise <code>reduced</code> and page volume <code>declined</code>. Nice work, team.</p>
+          <p>（PM：我们还扩大了值班覆盖，告警噪音减少、呼叫量下降。干得好，团队。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Quick Reference -->
+      <div class="chapter-card">
+        <h2>📊 Support 场景速查表</h2>
+        <h3>趋势汇报（Incident / Postmortem / 容量周报）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>指标骤升</strong></td>
+              <td>The error rate increased dramatically and peaked at X%.</td>
+            </tr>
+            <tr>
+              <td><strong>指标回落</strong></td>
+              <td>Latency dropped sharply and remained steady at Yms.</td>
+            </tr>
+            <tr>
+              <td><strong>波动 / 持平</strong></td>
+              <td>CPU fluctuated, but throughput remained constant.</td>
+            </tr>
+            <tr>
+              <td><strong>工单 / 负载变化</strong></td>
+              <td>Ticket volume went up by 40% this week.</td>
+            </tr>
+            <tr>
+              <td><strong>趋势判断</strong></td>
+              <td>There is an upward / downward trend in MTTR.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>状态变更（迁移 / 切换 / 事件复盘）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>系统被替换</strong></td>
+              <td>The legacy system was replaced by the new architecture.</td>
+            </tr>
+            <tr>
+              <td><strong>切换 / 适配</strong></td>
+              <td>We switched to the standby node and adapted the runbook.</td>
+            </tr>
+            <tr>
+              <td><strong>状态恶化 / 改善</strong></td>
+              <td>Health deteriorated, then improved gradually after the fix.</td>
+            </tr>
+            <tr>
+              <td><strong>削减 / 扩张</strong></td>
+              <td>We cut the batch size and expanded capacity ahead of the campaign.</td>
+            </tr>
+            <tr>
+              <td><strong>彻底改变</strong></td>
+              <td>Automation transformed our incident process.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Practice -->
+      <div class="chapter-card">
+        <h2>🚀 实战练习（Support 场景）</h2>
+        <h3>练习一：指标汇报填空</h3>
+        <blockquote>
+          <p><strong>Incident Update:</strong> The checkout API error rate __________ from 1% to 9% and __________ 9% at 13:00. Service health __________ after the traffic spike, so we __________ to the standby database. After the rollback, latency __________ and the success rate __________ over the next hour.</p>
+        </blockquote>
+        <h3>练习二：迁移通报填空</h3>
+        <blockquote>
+          <p><strong>Migration Note:</strong> The legacy monitor was __________ by the new stack, and the runbook was __________ for the new queries. We __________ traffic to the standby region while the main one was __________. Capacity was __________ ahead of the campaign, and alert noise __________. If it fails, we will __________ it back within 15 minutes.</p>
+        </blockquote>
+        <h3>练习三：复盘填空</h3>
+        <blockquote>
+          <p><strong>Postmortem:</strong> p99 latency __________ 1.8s, and the queue length __________ during that window. After the fix, MTTR __________ by 35% this quarter — a clear __________ in our response time.</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>📚 IELTS Vocabulary Learning Project</p>
+      <p style="margin-top: 10px; opacity: 0.8;">Customized for Application Support Scenarios</p>
+      <p style="margin-top: 10px; opacity: 0.8;">适配角色：Application Support Engineer（技术背景）</p>
+    </div>
+  </div>
+</body>
+</html>

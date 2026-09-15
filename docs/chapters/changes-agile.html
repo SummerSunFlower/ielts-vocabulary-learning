@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changes — 敏捷会议场景</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📐 Changes</h1>
+      <p>敏捷会议定制版（Agile Ceremonies）</p>
+      <p style="font-size: 0.95rem;">基于《Check Your English Vocabulary for IELTS》第12-17页 · 适用：Daily Standup / Sprint Review / Retrospective</p>
+    </div>
+
+    <!-- Back to Home -->
+    <nav class="nav">
+      <a href="../index.html">← 返回首页</a>
+      <a href="changes-support.html">Application Support 版</a>
+    </nav>
+
+    <div class="content">
+      <!-- Framework -->
+      <div class="chapter-card">
+        <h2>📌 核心词汇框架</h2>
+        <h3>词类分类</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词类</th>
+              <th>含义</th>
+              <th>敏捷场景应用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>速率 / 燃尽趋势类</strong></td>
+              <td>描述数值的上升、下降、波动、持平</td>
+              <td>sprint velocity、burndown、WIP、defect count 的汇报与趋势判断</td>
+            </tr>
+            <tr>
+              <td><strong>流程 / 状态改进类</strong></td>
+              <td>描述过程、性质、状态的变化</td>
+              <td>流程改进、Definition of Done、团队规模、质量门、回顾项落地</td>
+            </tr>
+            <tr>
+              <td><strong>趋势名词类</strong></td>
+              <td>概括"上升 / 下降"的方向</td>
+              <td>在 Sprint Review 总结周期走向：upward / downward trend</td>
+            </tr>
+            <tr>
+              <td><strong>程度副词类</strong></td>
+              <td>修饰变化的幅度与速度</td>
+              <td>dramatically、sharply、steadily、gradually、slightly 量化变化强度</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Category 1: Velocity & Burndown Trends (Changes 1) -->
+      <div class="chapter-card">
+        <h2>📈 速率与燃尽趋势词汇（Changes 1）</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>increase</code></td>
+              <td>v. / n. 上升</td>
+              <td>Velocity <code>increased</code> from 32 to 41 points over three sprints.<br>（速率三个 sprint 从 32 稳步升到 41 点。）</td>
+            </tr>
+            <tr>
+              <td><code>rise</code></td>
+              <td>v. 上升</td>
+              <td>The number of story points completed <code>rose</code> week over week.<br>（完成的用户故事点数逐周上升。）</td>
+            </tr>
+            <tr>
+              <td><code>go up</code></td>
+              <td>短语动词，上升</td>
+              <td>Our burndown showed remaining work <code>going up</code> after the scope change.<br>（范围变更后燃尽图显示剩余工作量上升。）</td>
+            </tr>
+            <tr>
+              <td><code>peak at</code></td>
+              <td>短语动词，达到峰值</td>
+              <td>Open defects <code>peaked at</code> 23 on day nine of the sprint.<br>（未关闭缺陷在 sprint 第 9 天达到峰值 23 个。）</td>
+            </tr>
+            <tr>
+              <td><code>reach a peak of</code></td>
+              <td>短语，达到…的峰值</td>
+              <td>The WIP <code>reached a peak of</code> 14 items before we limited it.<br>（在设限之前，在制品数量达到峰值 14 项。）</td>
+            </tr>
+            <tr>
+              <td><code>decrease</code></td>
+              <td>v. / n. 下降</td>
+              <td>Cycle time <code>decreased</code> after we trimmed handoffs.<br>（削减交接环节后，周期时间下降。）</td>
+            </tr>
+            <tr>
+              <td><code>decline</code></td>
+              <td>v. 下降</td>
+              <td>The defect rate <code>declined</code> steadily across the release.<br>（整个发布周期缺陷率稳步下降。）</td>
+            </tr>
+            <tr>
+              <td><code>drop</code></td>
+              <td>v. 下降</td>
+              <td>Deployment frequency <code>dropped</code> during the code freeze.<br>（冻结期内部署频率下降。）</td>
+            </tr>
+            <tr>
+              <td><code>fall</code></td>
+              <td>v. 下降</td>
+              <td>Carryover tasks <code>fell</code> from nine to three this sprint.<br>（遗留任务本 sprint 从 9 个降到 3 个。）</td>
+            </tr>
+            <tr>
+              <td><code>go down</code></td>
+              <td>短语动词，下降</td>
+              <td>The escaped-defect count <code>went down</code> after the new quality gate.<br>（新质量门引入后逃逸缺陷数下降。）</td>
+            </tr>
+            <tr>
+              <td><code>fluctuate</code></td>
+              <td>v. 波动</td>
+              <td>WIP <code>fluctuated</code> between six and eleven items all sprint.<br>（整个 sprint 在制品在 6 到 11 项之间波动。）</td>
+            </tr>
+            <tr>
+              <td><code>remain constant</code></td>
+              <td>短语，保持不变</td>
+              <td>The team size <code>remained constant</code> at seven engineers.<br>（团队规模保持在 7 名工程师不变。）</td>
+            </tr>
+            <tr>
+              <td><code>remain steady</code></td>
+              <td>短语，保持稳定</td>
+              <td>Velocity <code>remained steady</code> around 38 points per sprint.<br>（速率稳定在每 sprint 约 38 点。）</td>
+            </tr>
+            <tr>
+              <td><code>dramatically</code></td>
+              <td>adv. 大幅地</td>
+              <td>Escaped bugs <code>dropped dramatically</code> after the review gate.<br>（新评审门后逃逸缺陷大幅下降。）</td>
+            </tr>
+            <tr>
+              <td><code>sharply</code></td>
+              <td>adv. 急剧地</td>
+              <td>Open defects <code>fell sharply</code> in the week after release.<br>（发布后那一周未关闭缺陷急剧下降。）</td>
+            </tr>
+            <tr>
+              <td><code>steadily</code></td>
+              <td>adv. 稳步地</td>
+              <td>Velocity <code>rose steadily</code> over four consecutive sprints.<br>（速率连续四个 sprint 稳步上升。）</td>
+            </tr>
+            <tr>
+              <td><code>gradually</code></td>
+              <td>adv. 逐渐地</td>
+              <td>Lead time <code>improved gradually</code> as the pipeline matured.<br>（随流水线成熟，前置时间逐步改善。）</td>
+            </tr>
+            <tr>
+              <td><code>slightly</code></td>
+              <td>adv. 略微地</td>
+              <td>The burndown slope <code>changed slightly</code> after replanning.<br>（重新规划后燃尽斜率略有变化。）</td>
+            </tr>
+            <tr>
+              <td><code>upward trend</code></td>
+              <td>n. 上升趋势</td>
+              <td>There is a clear <code>upward trend</code> in our deployment frequency.<br>（我们的部署频率呈明显的上升趋势。）</td>
+            </tr>
+            <tr>
+              <td><code>downward trend</code></td>
+              <td>n. 下降趋势</td>
+              <td>We see a <code>downward trend</code> in cycle time this quarter.<br>（本季度周期时间呈下降趋势。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 敏捷场景提示：</strong> 这 20 个词是 Sprint Review 里用数据说话的核心工具；搭配 dramatically / steadily 等副词，能精确传达变化幅度。</p>
+          <p>Velocity <code>increased</code> steadily from 32 to 41 points over three sprints.<br>（速率三个 sprint 从 32 稳步升到 41 点。）</p>
+          <p>Open defects <code>peaked at</code> 23 on day nine, then <code>fell sharply</code> after the hardening week.<br>（未关闭缺陷第 9 天达到峰值 23，之后在加固周急剧下降。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Category 2: Process & State Verbs (Changes 2) -->
+      <div class="chapter-card">
+        <h2>🔧 流程与状态改进动词（Changes 2）</h2>
+        <h3>Group 1 — 状态 / 性质变化</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>adjust</code></td>
+              <td>v. 调整 / 适应</td>
+              <td>We <code>adjusted</code> the sprint length to two weeks after the pilot.<br>（试点后我们把 sprint 长度调整为两周。）</td>
+            </tr>
+            <tr>
+              <td><code>alter</code></td>
+              <td>v. 改变</td>
+              <td>The Definition of Done was <code>altered</code> following the process audit.<br>（流程审计后"完成定义"被修改。）</td>
+            </tr>
+            <tr>
+              <td><code>deteriorate</code></td>
+              <td>v. 恶化</td>
+              <td>Code quality <code>deteriorated</code> when WIP was consistently too high.<br>（在制品长期过高时代码质量恶化。）</td>
+            </tr>
+            <tr>
+              <td><code>exchange</code></td>
+              <td>v. 交换</td>
+              <td>The two teams <code>exchanged</code> a reviewer each sprint for cross-checking.<br>（两个团队每个 sprint 互换一名评审做交叉检查。）</td>
+            </tr>
+            <tr>
+              <td><code>fade</code></td>
+              <td>v. 逐渐消失 / 褪色</td>
+              <td>Interest in the old release train <code>faded</code> after the weekly pilot.<br>（周级试点后，大家对旧发布节奏的兴趣逐渐消退。）</td>
+            </tr>
+            <tr>
+              <td><code>reduce</code></td>
+              <td>v. 减少</td>
+              <td>We <code>reduced</code> WIP to five to keep the flow predictable.<br>（我们把在制品减少到 5，以保持流动可预测。）</td>
+            </tr>
+            <tr>
+              <td><code>renovate</code></td>
+              <td>v. 翻新</td>
+              <td>We <code>renovated</code> the onboarding wiki for new developers.<br>（我们翻新了面向新人的入职 wiki。）</td>
+            </tr>
+            <tr>
+              <td><code>swell</code></td>
+              <td>v. 膨胀 / 增大</td>
+              <td>The backlog <code>swelled</code> after the discovery workshop.<br>（探索工作坊后待办清单膨胀。）</td>
+            </tr>
+            <tr>
+              <td><code>switch</code></td>
+              <td>v. 转换</td>
+              <td>We <code>switched</code> the planning tool mid-quarter.<br>（我们在季度中切换了规划工具。）</td>
+            </tr>
+            <tr>
+              <td><code>switch to</code></td>
+              <td>短语，转向</td>
+              <td>We <code>switched to</code> trunk-based development last month.<br>（上月我们转向了主干开发。）</td>
+            </tr>
+            <tr>
+              <td><code>vary</code></td>
+              <td>v. 变化 / 不同</td>
+              <td>Sprint goals <code>vary</code> by team maturity and domain risk.<br>（sprint 目标随团队成熟度与领域风险而不同。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Group 2 — 改进 / 转型</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>词汇</th>
+              <th>用法</th>
+              <th>示例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>adapt</code></td>
+              <td>v. 适应 / 改编</td>
+              <td>The standup format <code>adapted</code> well to remote work.<br>（站会形式很好地适应了远程工作。）</td>
+            </tr>
+            <tr>
+              <td><code>cut</code></td>
+              <td>v. 削减</td>
+              <td>We <code>cut</code> the release train from monthly to weekly.<br>（我们把发布节奏从月级削减到周级。）</td>
+            </tr>
+            <tr>
+              <td><code>decline</code></td>
+              <td>v. 下降 / 拒绝</td>
+              <td>The proposal was <code>declined</code> by the steering group.<br>（该提案被指导委员会拒绝。）</td>
+            </tr>
+            <tr>
+              <td><code>disappear</code></td>
+              <td>v. 消失</td>
+              <td>Hand-off delays <code>disappeared</code> after we co-located the teams.<br>（团队集中办公后交接延迟消失了。）</td>
+            </tr>
+            <tr>
+              <td><code>expand</code></td>
+              <td>v. 扩张</td>
+              <td>The squad <code>expanded</code> from five to eight members.<br>（小组从 5 人扩张到 8 人。）</td>
+            </tr>
+            <tr>
+              <td><code>improve</code></td>
+              <td>v. 改善</td>
+              <td>We <code>improved</code> the build time with a shared cache.<br>（我们用共享缓存改善了构建时间。）</td>
+            </tr>
+            <tr>
+              <td><code>promote</code></td>
+              <td>v. 提升 / 晋升</td>
+              <td>She was <code>promoted</code> to tech lead after the successful launch.<br>（成功发布后她被提升为技术负责人。）</td>
+            </tr>
+            <tr>
+              <td><code>relax</code></td>
+              <td>v. 放松</td>
+              <td>We <code>relaxed</code> the WIP limit during the crunch period.<br>（在紧张期我们放宽了在制品限制。）</td>
+            </tr>
+            <tr>
+              <td><code>replace</code></td>
+              <td>v. 替换</td>
+              <td>We <code>replaced</code> the daily status meeting with async updates.<br>（我们用异步更新取代了每日状态会议。）</td>
+            </tr>
+            <tr>
+              <td><code>transform</code></td>
+              <td>v. 彻底转型 / 改变</td>
+              <td>The retro helped us <code>transform</code> how we plan capacity.<br>（回顾会帮助我们彻底改变了规划产能的方式。）</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>💡 敏捷场景提示：</strong> Group 1 描述"状态变了"，Group 2 描述"变好了 / 转型了"；在 Retrospective 里高频出现。</p>
+          <p>We <code>replaced</code> the daily status meeting with an async update to save time.<br>（我们用异步更新取代每日状态会议以节省时间。）</p>
+          <p>The retro action <code>transformed</code> our planning cadence within two sprints.<br>（这条回顾项在两个 sprint 内彻底改变了我们的规划节奏。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 1: Sprint Review velocity report -->
+      <div class="chapter-card">
+        <h2>🎯 场景一：Sprint Review 速率汇报</h2>
+        <p><strong>流程：</strong> 指标 → 趋势 → 结论</p>
+        <table>
+          <thead>
+            <tr>
+              <th>指标</th>
+              <th>趋势</th>
+              <th>结论</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Velocity</strong></td>
+              <td><code>rose steadily</code> from 32 to 41 points</td>
+              <td>团队交付能力增强，可承诺更大 sprint goal</td>
+            </tr>
+            <tr>
+              <td><strong>Burndown</strong></td>
+              <td><code>remained steady</code> after mid-sprint</td>
+              <td>剩余工作量按预期燃烧，无重大偏差</td>
+            </tr>
+            <tr>
+              <td><strong>Open defects</strong></td>
+              <td><code>peaked at</code> 23, then <code>fell sharply</code></td>
+              <td>加固周见效，质量回归可控</td>
+            </tr>
+            <tr>
+              <td><strong>WIP</strong></td>
+              <td><code>fluctuated</code> between 6 and 11</td>
+              <td>流动不够平稳，需在 Retro 设 WIP 上限</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> In this sprint review, velocity <code>increased</code> steadily from 32 to 41 story points, showing a clear <code>upward trend</code> in our delivery capacity. The burndown <code>remained steady</code> after day six, so we finished the sprint goal on time. Open defects <code>peaked at</code> 23 on day nine but <code>dropped dramatically</code> after the hardening week, which is a <code>downward trend</code> we want to keep. However, WIP <code>fluctuated</code> between six and eleven items, so we will add a WIP limit next sprint.</p>
+        </blockquote>
+      </div>
+
+      <!-- Scenario 2: Retrospective improvement items -->
+      <div class="chapter-card">
+        <h2>🎯 场景二：Retrospective 改进项</h2>
+        <p><strong>流程：</strong> 问题 → 改进动作 → 预期效果</p>
+        <table>
+          <thead>
+            <tr>
+              <th>问题</th>
+              <th>改进动作</th>
+              <th>预期效果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>每日状态会议耗时</td>
+              <td><code>replaced</code> with async updates</td>
+              <td>每天节省 30 分钟同步时间</td>
+            </tr>
+            <tr>
+              <td>交接延迟高</td>
+              <td>流程 <code>adapted</code> 到集中办公</td>
+              <td>阻塞时间消失</td>
+            </tr>
+            <tr>
+              <td>在制品过多</td>
+              <td>WIP limit <code>reduced</code> to five</td>
+              <td>流动更可预测</td>
+            </tr>
+            <tr>
+              <td>规划方式陈旧</td>
+              <td>回顾会 <code>transformed</code> 规划节奏</td>
+              <td>产能规划更准确</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <p><strong>完整示例：</strong> From this retro, three actions stand out. First, we <code>replaced</code> the daily status meeting with an async update, which <code>improved</code> our focus time. Second, the planning process <code>adapted</code> to a two-week rhythm, and hand-off delays <code>disappeared</code>. Third, we <code>reduced</code> the WIP limit to five, and that single change <code>transformed</code> how smoothly work flows to done. Overall, throughput <code>improved</code> by 20% and the team feels the cadence is healthier.</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 1: Daily Standup -->
+      <div class="chapter-card">
+        <h2>💬 对话一：Daily Standup 描述昨日进展与阻塞趋势</h2>
+        <blockquote>
+          <p><strong>Dev A:</strong> Yesterday our open-defect count <code>dropped</code> from 12 to 7 after the pair-review session.<br>（昨天结对评审后，未关闭缺陷从 12 个降到 7 个。）</p>
+          <p><strong>Dev B:</strong> The build time <code>remained steady</code> at about nine minutes, no regression.<br>（构建时间稳定在约 9 分钟，没有回退。）</p>
+          <p><strong>Dev A:</strong> The review queue <code>fluctuated</code> between three and six PRs through the day.<br>（评审队列全天在 3 到 6 个 PR 之间波动。）</p>
+          <p><strong>Scrum Master:</strong> Good. To keep flow smooth, we <code>reduced</code> WIP to five and the blocked ticket cleared this morning.<br>（很好。为保持流动顺畅，我们把在制品降到 5，今早那张阻塞任务也清掉了。）</p>
+        </blockquote>
+      </div>
+
+      <!-- Dialogue 2: Retro process improvement -->
+      <div class="chapter-card">
+        <h2>💬 对话二：Retro 讨论流程改进</h2>
+        <blockquote>
+          <p><strong>Tech Lead:</strong> The escape rate <code>declined</code> after we added the pair-review gate.<br>（加入结对评审门后，逃逸率下降了。）</p>
+          <p><strong>PM:</strong> And the hand-off delay <code>disappeared</code> once we merged the two squads.<br>（合并两个小组后，交接延迟消失了。）</p>
+          <p><strong>Dev:</strong> Throughput <code>improved</code> by 20% over the last two sprints.<br>（过去两个 sprint 吞吐量提升了 20%。）</p>
+          <p><strong>Scrum Master:</strong> So this retro should <code>transform</code> our planning cadence — let's move to a fixed two-week rhythm.<br>（所以本次回顾会应当彻底改变我们的规划节奏——我们改用固定的双周节奏吧。）</p>
+        </blockquote>
+      </div>
+
+      <div class="chapter-card">
+        <h2>📊 敏捷会议速查表</h2>
+        <h3>Daily Standup（昨日 / 今日 / 阻塞）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>进展上升</strong></td>
+              <td>Our velocity / completed points rose; open defects dropped from X to Y.</td>
+            </tr>
+            <tr>
+              <td><strong>状态持平</strong></td>
+              <td>The build time remained steady; WIP remained constant at N.</td>
+            </tr>
+            <tr>
+              <td><strong>波动</strong></td>
+              <td>The review queue fluctuated between three and six PRs.</td>
+            </tr>
+            <tr>
+              <td><strong>减少阻塞</strong></td>
+              <td>We reduced WIP to keep the flow smooth.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Sprint Review（趋势汇报）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>上升趋势</strong></td>
+              <td>Velocity increased steadily; there is an upward trend in deployment frequency.</td>
+            </tr>
+            <tr>
+              <td><strong>下降趋势</strong></td>
+              <td>Defects declined; we see a downward trend in cycle time.</td>
+            </tr>
+            <tr>
+              <td><strong>峰值</strong></td>
+              <td>Open defects peaked at 23, then fell sharply.</td>
+            </tr>
+            <tr>
+              <td><strong>幅度修饰</strong></td>
+              <td>Escaped bugs dropped dramatically / slightly after the gate.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Retrospective（改进项）</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>想表达</th>
+              <th>常用表达</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>替换流程</strong></td>
+              <td>We replaced the status meeting with async updates.</td>
+            </tr>
+            <tr>
+              <td><strong>改善 / 适应</strong></td>
+              <td>The process adapted to remote work; throughput improved by 20%.</td>
+            </tr>
+            <tr>
+              <td><strong>削减 / 扩张</strong></td>
+              <td>We cut the release train to weekly; the squad expanded to eight.</td>
+            </tr>
+            <tr>
+              <td><strong>转型</strong></td>
+              <td>This retro action transformed how we plan capacity.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="chapter-card">
+        <h2>🚀 实战练习（敏捷场景）</h2>
+        <h3>练习一：Sprint Review 填空</h3>
+        <blockquote>
+          <p><strong>Sprint Review:</strong> In this sprint, velocity __________ from 32 to 41 points, showing a clear __________ in our delivery capacity. Open defects __________ at 23 on day nine, but then __________ sharply after the hardening week. However, WIP __________ between six and eleven items, so we will add a WIP limit next sprint.</p>
+        </blockquote>
+        <h3>练习二：Retrospective 填空</h3>
+        <blockquote>
+          <p><strong>Retro:</strong> We __________ the daily status meeting with async updates, which __________ our focus time. The planning process __________ to a two-week rhythm, and hand-off delays __________. We also __________ the WIP limit to five, and that change __________ how smoothly work flows to done.</p>
+        </blockquote>
+        <h3>练习三：Daily Standup 填空</h3>
+        <blockquote>
+          <p><strong>Standup:</strong> Yesterday our open-defect count __________ from 12 to 7. The build time __________ steady at about nine minutes. The review queue __________ between three and six PRs, and we __________ WIP to five to keep the flow smooth.</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>📚 IELTS Vocabulary Learning Project</p>
+      <p style="margin-top: 10px; opacity: 0.8;">Customized for Agile Ceremonies Scenarios</p>
+      <p style="margin-top: 10px; opacity: 0.8;">适配角色：Scrum PM / Dev（技术背景）</p>
+    </div>
+  </div>
+</body>
+</html>
